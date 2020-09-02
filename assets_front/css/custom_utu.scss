@@ -24,6 +24,108 @@
 
 }
 
+
+// bagian index body
+.main-banner{
+    height: 100%;
+  flex-direction: column;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  top: 0px;
+}
+.judul-banner{
+  font-family: Lato, sans-serif;
+  display: block;
+  color:#000;
+  text-align: center;
+  margin-top: 170px;
+
+}
+.cari-banner{
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.form-cari-banner{
+  display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 700px;
+    color: rgb(119, 121, 140);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 21px 36px;
+    border-radius: 6px;
+    overflow: hidden;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+
+   
+}
+
+.input-banner{
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  font-size: 15px;
+  padding-right: 20px;
+  height: 48px;
+  color: rgb(119, 121, 140);
+  background-color: inherit;
+  appearance: none;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+ padding: 2px 15px;
+}
+
+.input-banner:focus{
+  outline: none;
+}
+
+.submit-banner{
+  background-color: rgb(0, 158, 127);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    height: 48px;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    outline: 0px;
+}
+.banner-index{
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: url("https://dl.dropboxusercontent.com/s/85jih81h7f06y6q/bg_index.png?dl=0");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width:991px){
+  .main-banner{
+    height: 100vh;
+  }
+}
+
+// end index body
+
 // input search in
 .search-in-area {
   position: absolute;
@@ -156,6 +258,8 @@
 // end nav bawah
 
 // end  nav cutom
+
+
 
 // product index
 .slider-ind {

@@ -42,7 +42,13 @@
 
 <!-- nsearchnav -->
 <div class="search-nav" id="search-nav">
-        tes
+     <div class="float-left">
+       Judul brand
+     </div>
+
+     <div class="float-right">
+       semua ada disni
+     </div>
 </div>
  <!-- end searchnav -->
 

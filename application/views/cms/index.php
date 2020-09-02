@@ -1,36 +1,30 @@
 
+
+<!-- banner index -->
+<div class="main-banner d-md-none d-none d-lg-block">
+    <div class="banner-index">
+      <div class="judul-banner">
+          <h1>Hanya saja mencoba</h1>
+          <p style="color:rgb(119, 121, 140);">Semua yang ada disini halal dan dapat ditemukan dimana saja</p>
+          <br>
+        <!-- mulai pencarian banner-->
+          <div class="cari-banner">
+            <form action="" method="post" class="form-cari-banner">
+              <input type="text" class="input-banner" placeholder="Cari kebutuhan kamu disini">
+              <input type="submit" class="submit-banner" value="Temukan">
+            </form>
+          </div>
+        <!-- end pencarian -->
+      </div>
+    </div>
+</div>
+
+<!-- end banner -->
   <!-- product index   -->
   <br>	
 <div class="" style="margin-top:120px">
 <!-- carousel gambar -->
-<div class="slider-prepro">
-  <div class="row">
-    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-      <div class="imgpre-pro"></div>
-      
-    </div>
-    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-      <div class="imgpre-pro"></div>
-      
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-      <div class="imgpre-pro"></div>
-      
-    </div>
-  </div>
-</div>
-<section class="variable slider slider-ind" style="margin-bottom:40px;" id="slider-indj">
-    <div class="img-slick-slider">
-      <img src="<?php echo base_url()?>dah_image/default/promo_kentang.png">
-    </div>
-    <div class="img-slick-slider">
-      <img src="<?php echo base_url()?>dah_image/default/promo_bawang.png">
-    </div>
-    <div class="img-slick-slider">
-      <img src="<?php echo base_url()?>dah_image/default/nov_cash.png">
-    </div>
-  
-  </section>
+
 <!-- end carousel gambar -->
 
 
@@ -509,7 +503,7 @@
 
 
 
-<script>
+<!-- <script>
 $(document).ready(function () {
 		$('<audio id="notif_sound"><source src="<?php echo base_url()?>dah_image/notif.mp3" type="audio/mpeg"></audio>').appendTo('body');
 		var sound_x = document.getElementById("notif_sound");
@@ -529,4 +523,4 @@ $(document).ready(function () {
 	
 	});
   
-</script>
+</script> -->

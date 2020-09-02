@@ -688,7 +688,7 @@ var element = document.getElementById("search-nav");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
+  if (document.body.scrollTop > 380 || document.documentElement.scrollTop > 380) {
 	element.classList.add("sticky-top");
 	element.classList.remove("rmv-search-nav");
 	element.style.boxShadow="rgba(0, 0, 0, 0.06) 0px 1px 2px";
