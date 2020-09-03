@@ -35,7 +35,7 @@
           <div class="body-footer">
             <ul>
               <li>
-            	 <a href=""><i class="fas fa-envelope-open-text" style="margin-right:4px;"></i> supportserbaumbi@gmail.com</a>
+            	 <a href=""><i class="fas fa-envelope-open-text" style="margin-right:4px;"></i> support@gmail.com</a>
 			  </li>
 			  
 			  <li>
@@ -47,13 +47,13 @@
 
 			  <li>
 				  
-				<p class="tx-14 green-text text-darken-2" style="margin-bottom:4px;margin-top:10px;">Temukan Kami di</p>
+				<p class="tx-14 green-text text-darken-2" style="margin-bottom:4px;margin-top:10px;">Ikuti Kami</p>
 				<div class="social-sec">
 					<div class="social-btn">
 						<a href="" title="Facebook"><i class="fab fa-facebook blue-text text-darken-4"></i></a>	
 					</div>
 					<div class="social-btn">
-						<a href="" title="Line"><i class="fab fa-line green-text text-accent-4"></i></a>	
+						<a href="" title="Line"><i class="fab fa-instagram pink-text text-accent-4"></i></a>	
 					</div>
 					<div class="social-btn">
 						<a href="" title="Whatsapp"><i class="fab fa-whatsapp green-text text-darken-4"></i></a>	
@@ -75,16 +75,15 @@
 
         <div class="col-lg-3 col-md-6 col-sm-12 col-12">
             <div class="tittle-footer">
-                <h2>Kategori </h2>
+                <h2>Bantuan </h2>
             </div>
   
             <div class="body-footer">
               <ul>
-			  <?php foreach($category_product as $k){ ?>
-                <li>
-				<a href="<?php echo base_url().'index/kategori_produk/'.$k->pcat_id;?>"><?php echo $k->pcat_name?></a>
-				</li>
-				<?php } ?> 
+				<li><a href="">Syarat & Ketentuan</a></li>
+
+				<li><a href="">Kebijakan Privasi</a></li>
+
               </ul>
             </div>
         </div>
@@ -139,7 +138,7 @@
 
   <div class="copyright-footer">
     <div class="d-flex justify-content-center tx-14">
-      &copy;2019 Dibuat Oleh : <a href="" class="pink-text text-lighten-2">&nbsp;Mahasiswa Unimal</a>&nbsp;with <i class="fa fa-heartbeat pink-text" style="margin-top:6px;margin-left:5px;"></i>
+      &copy;<?php echo date("Y")?> Dibuat Oleh : Mahasiswa Unimal&nbsp;dengan <i class="fa fa-heartbeat pink-text" style="margin-top:6px;margin-left:5px;"></i>
 
     </div>
     </div>
@@ -679,9 +678,8 @@
  	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVbyFOcEs46t1t4srUIKVZIfZpSXsbiN8&callback=initMap" async defer></script>
 
 	
-
 <!-- script buat header -->
-	  <script>
+<script>
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 var element = document.getElementById("search-nav");
 
@@ -693,10 +691,13 @@ function scrollFunction() {
 	element.classList.remove("rmv-search-nav");
 	element.style.boxShadow="rgba(0, 0, 0, 0.06) 0px 1px 2px";
 	element.style.background="#fff";
+	document.getElementById("cari-header").style.display="block";
+
   } else {
 	element.classList.remove("sticky-top");
 	element.classList.add("rmv-search-nav");
-	element.removeAttribute("style")
+	element.removeAttribute("style");
+	document.getElementById("cari-header").style.display="none";
   }
 }
 

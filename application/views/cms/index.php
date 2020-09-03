@@ -1,5 +1,6 @@
 
 
+
 <!-- banner index -->
 <div class="main-banner d-md-none d-none d-lg-block">
     <div class="banner-index">
@@ -9,9 +10,9 @@
           <br>
         <!-- mulai pencarian banner-->
           <div class="cari-banner">
-            <form action="" method="post" class="form-cari-banner">
-              <input type="text" class="input-banner" placeholder="Cari kebutuhan kamu disini">
-              <input type="submit" class="submit-banner" value="Temukan">
+            <form action="<?php echo base_url().'search'?>" method="post" class="form-cari-banner">
+              <input type="text" class="input-banner" placeholder="Cari kebutuhan kamu disini"  name="item">
+              <input type="submit" class="submit-banner" value="Temukan"  name="submit">
             </form>
           </div>
         <!-- end pencarian -->
@@ -20,150 +21,71 @@
 </div>
 
 <!-- end banner -->
+
+<div class="container-custom">
+<!-- alasan berbelanja dikami -->
+  <div class="alasan">
+      <div class="judul-alasan">
+        <h3 style="font-weight:700">Mengapa Belanja Di Kami</h3>
+      </div>
+
+      <div class="row">
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="isi-alasan">
+                <div class="img-alasan" style="text-align:center">
+                    <img src="<?php echo base_url()?>/dah_image/index/discount_2.png" alt="" srcset="">
+                </div>
+               Harga Spesial
+            </div>
+        
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+              <div class="isi-alasan">
+                  <div class="img-alasan" style="text-align:center">
+                        <img src="<?php echo base_url()?>/dah_image/index/deliver.png" alt="" srcset="">
+                    </div>
+                    Keseluruh Indonesia
+              </div>  
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+              <div class="isi-alasan">
+                  <div class="img-alasan" style="text-align:center">
+                        <img src="<?php echo base_url()?>/dah_image/index/payment.png" alt="" srcset="">
+                    </div> 
+                   Pembayaran Aman
+              </div>  
+            </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="isi-alasan">
+                  <div class="img-alasan" style="text-align:center">
+                        <img src="<?php echo base_url()?>/dah_image/index/support.png" alt="" srcset="">
+                    </div>
+                    Pelayanan Terbaik
+              </div> 
+          </div>
+
+      </div>
+      
+      <div >
+              <a href="" class="btn btn-core" style="font-size:18px;padding:8px 35px">Mulai Belanja Dengan Kami</a>
+          </div>
+  </div>
+<!-- end alasan -->
+</div>
+
+
+<!-- container -->
+<div class="container-custom">
   <!-- product index   -->
   <br>	
-<div class="" style="margin-top:120px">
+<div class="" >
 <!-- carousel gambar -->
 
 <!-- end carousel gambar -->
 
-
-<!-- categori -->
-<div class="cat-index">
-    <p class="tx-16 tx-bold-600" style="margin-bottom:2px;">Kategori</p> 
-    <div class="row">
-      
-        <div class="col-lg-3 col-md-4 col-sm-6 col-12 ">
-
-        <a href="<?php echo base_url().'index/kategori_produk/6'?>">
-          <div class="cat-index-body">
-              <div class="cat-ib-img">
-                  <img src="<?php echo base_url()?>dah_image/icon-cate/icon-kentang.png">
-              </div>
-
-              <div class="cat-ib-title">
-              Produk Kentang
-              </div>
-          </div>
-          </a>
-
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-    
-              <a href="<?php echo base_url().'index/kategori_produk/29'?>">
-              <div class="cat-index-body">
-                  <div class="cat-ib-img">
-                      <img src="<?php echo base_url()?>dah_image/icon-cate/icon-bawang.png">
-                  </div>
-
-                  <div class="cat-ib-title">
-                  Produk Bawang
-                  </div>
-              </div>
-              </a>
-       
-        </div>
-      
-        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-           
-                  <a href="<?php echo base_url().'index/kategori_produk/17'?>">
-                <div class="cat-index-body">
-                    <div class="cat-ib-img">
-                        <img src="<?php echo base_url()?>dah_image/icon-cate/icon-ubi.png">
-                    </div>
-
-                    <div class="cat-ib-title">
-                    Produk Ubi
-                    </div>
-                </div>
-                </a>
-             
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-       
-          <a href="<?php echo base_url().'index/kategori_produk/30'?>">
-                <div class="cat-index-body">
-                    <div class="cat-ib-img">
-                        <img src="<?php echo base_url()?>dah_image/icon-cate/icon-wortel.png">
-                    </div>
-
-                    <div class="cat-ib-title">
-                    Produk Wortel
-                    </div>
-                </div>
-                </a>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-       
-          <a href="<?php echo base_url().'index/kategori_produk/32'?>">
-             <div class="cat-index-body">
-                 <div class="cat-ib-img">
-                     <img src="<?php echo base_url()?>dah_image/icon-cate/icon-lobak.png">
-                 </div>
-
-                 <div class="cat-ib-title">
-                 Produk Lobak
-                 </div>
-             </div>
-             </a>
-         </div>
-         
-         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-       
-       <a href="<?php echo base_url().'index/kategori_produk/33'?>">
-          <div class="cat-index-body">
-              <div class="cat-ib-img">
-                  <img src="<?php echo base_url()?>dah_image/icon-cate/icon-jicama.png">
-              </div>
-
-              <div class="cat-ib-title">
-              Produk Bengkuang
-              </div>
-          </div>
-          </a>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-       
-       <a href="<?php echo base_url().'index/kategori_produk/34'?>">
-          <div class="cat-index-body">
-              <div class="cat-ib-img">
-                  <img src="<?php echo base_url()?>dah_image/icon-cate/icon-talas.png">
-              </div>
-
-              <div class="cat-ib-title">
-              Produk Talas
-              </div>
-          </div>
-          </a>
-      </div>
-
-      
-      <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-       
-       <a href="<?php echo base_url().'index/kategori_produk/31'?>">
-          <div class="cat-index-body">
-              <div class="cat-ib-img">
-                  <img src="<?php echo base_url()?>dah_image/icon-cate/icon-talas.png">
-              </div>
-
-              <div class="cat-ib-title">
-              Produk Garut
-              </div>
-          </div>
-          </a>
-      </div>
-      
-
-    </div>
-</div>
-
-
-<!-- end categori -->
 <!--strat product-->
 <?php	if(count($products) > 0){?>
-  <p class="tx-16 tx-bold-600" style="margin-bottom:20px;">Baru di panen nih</p> 
+  <p class="tx-16 tx-bold-600" style="margin-bottom:20px;">Hot Deal</p> 
   <div class="load-bef-ind d-lg-block d-xl-block d-md-block d-sm-block d-none">
       <!-- loaderprepro -->
       <div class="loader-prepro">
@@ -222,7 +144,7 @@
                    <i class="fa fa-star yellow-text text-darken-3"></i>
                    <i class="fa fa-star yellow-text text-darken-3"></i>
                    <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <span style="color:#000;opacity:0.4">(50) ulasan</span>
+                   <!-- <span style="color:#000;opacity:0.4">ulasan</span> -->
                  </p>
 
                  <p class="tx-13" style="margin-top:5px;color:#000;opacity:0.5"> <i class="fas fa-store-alt"></i> 
@@ -303,164 +225,23 @@
         </div>
   <?php } ?>  
 <!-- end baru panen -->
-<!-- start banyak diburu -->
-  <p class="tx-16 tx-bold-600" style="margin-bottom:20px;">Yang banyak diserbu</p> 
-
-  <div class="load-bef-ind d-lg-block d-xl-block d-md-block d-sm-block d-none">
-      <!-- loaderprepro -->
-      <div class="loader-prepro">
-          <div class="row">
-            <?php for($i=1;$i < 6;$i++){?>
-            <div class="colb-xl-3 col-lg-3 colb-md-5 col-sm-6">
-                <div class="lprepro-ind">
-                    <div class="prepro-shine lprepro-img"></div>
-                    <div class="prepro-shine lprepro-title"></div>
-                    <div class="prepro-shine lprepro-title"></div>
-                    <div class="prepro-shine lprepro-price"></div>
-                    <div class="prepro-shine lprepro-footer"></div>
-                </div>
-            </div>
-            <?php }?>
-          </div>
-      </div>
-      <!-- end loader-prepro -->
-      <div class="sp-body">
-          <div class="prod-ind prod-insli2" id="prod-ind-jb">
-                <?php
-                    $arr = array(68,65,71,72,69,70,66);
-                    for($a=0;$a<count($arr);$a++){
-                    $ww = array('prod_id' => $arr[$a]);
-                    $qas = $this->m_dah->edit_data($ww,'dah_products')->result();
-                    
-                ?>  
-                <?php foreach($qas as $sb){?>
-                  <div class="prod-index" >
-             
-             <!-- image -->
-             <div class="prod-img">
-               <a href="<?php echo base_url().'produk/'.$sb->prod_id.'-'.create_slug($sb->prod_name) ?>">
-                   <?php if($sb->prod_img1!=""){
-                       echo"<img alt='Product' src='".base_url().'dah_image/products/'.$sb->prod_img1."'>";
-                       }else{
-                         echo"<img alt='Product' src='".base_url()."dah_image/default/no_product.jpg'>";
-                       }
-                       ?>
-               </a>
-             </div>
-
-             <!-- end image -->
-             <!-- judul -->
-            
-               <div class="prod-title">
-                   <a href="<?php echo base_url().'produk/'.$sb->prod_id.'-'.create_slug($sb->prod_name) ?>">
-                     <?php 
-                         echo substr(strip_tags($sb->prod_name),0,70);
-                     ?> 
-                   </a>         
-               </div>
-         
-             <!-- end judul -->
-            <a href="<?php echo base_url().'produk/'.$sb->prod_id.'-'.create_slug($sb->prod_name) ?>">
-               <!-- harga & add to cart -->
-               <div class="prod-price">
-                 Rp. <?php echo number_format($sb->prod_price) ?>
-                 <p class="tx-12" style="margin-top:7px;">
-                   <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <span style="color:#000;opacity:0.4">(50) ulasan</span>
-                 </p>
-
-                 <p class="tx-13" style="margin-top:5px;color:#000;opacity:0.5"> <i class="fas fa-store-alt"></i> 
-                 <?php 
-                     $nama_author=$this->m_dah->product_author_detail($sb->prod_author)->row();
-                     echo $nama_author->user_name;      
-                   ?> 
-
-               </p>
-               </div>
-               <!-- end harga -->
-           </a>
-            
-           
-           </div> 
-                
-                <?php }} ?> 
-            
-          </div>
-
-        </div>
-  </div>
-  <!-- end banyak diburu -->
-
 
 <!--end product-->
-    <!-- start lvl 2 -->
-    <?php if($this->session->userdata('user_status') != "login"){?>
-    <div class="row">
-      <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-            <div class="dtl-txc-minat">
-                  <p class="tx-18 red-text text-accent-4 tx-bold-600">Apakah anda memiliki hasil pertanian umbi-umbian?</p>  
-                  <p class="tx-14" style="margin-top:-10px;">ayo jual hasil anda di kami, mendapatkan penghasilan tambahan dengan pembeli diseluruh indonesia</p>
-                  
-                  <a href="<?php echo base_url().'daftar-petani'?>" class="btn-bordered-md bor-success" style="margin-left:0;">Mulai Menjual</a>
 
-            </div>
-      </div>
-      <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-      <div class="dtl-txc-minat">
-            <p class="tx-18 orange-text text-accent-4 tx-bold-600">Bingung cari produk umbi-umbian ?</p>  
-            <p class="tx-14" style="margin-top:-10px;">Belanja di kami dengan berbagai macam hasil pertanian dari petani lokal, dengan hasil terbaik</p>
-            
-            <a href="<?php echo base_url().'shop'?>" class="btn-bordered-md bor-primary" style="margin-left:0;">Mulai Belanja</a>
-
-      </div>               
-
-      </div>
-    </div>
-    <?php }else{}?>
 
 
                        
 
-    <div class="dtl-txc">
-      <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-              <div class="dtl-txc-img">
-              <img src="<?php echo base_url()?>dah_image/system/payment-secure.png">        
-                    <div class="dtl-txc-kosa">
-                        Transaksi di kami sangat aman, dan menjamin data pembeli tidak disalahgunakan 
-                    </div>
-              </div>
-                       
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-              <div class="dtl-txc-img">
-                  <img src="<?php echo base_url()?>dah_image/system/fast-delivery.png">        
-                        <div class="dtl-txc-kosa">
-                            Pengiriman kami menjangkau seluruh daerah di Indonnesia, jadi jangan khawatir produk tidak sampai 
-                        </div>
-                  </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-              <div class="dtl-txc-img">
-                      <img src="<?php echo base_url()?>dah_image/system/garansi.png" style="width:60px;height:60px;margin-top:-10px;margin-left:-10px">        
-                            <div class="dtl-txc-kosa">
-                               Pembelian anda akan aman, dikarenakan apabila produk dalam keadaan tidak sesuai uang anda dijamin kembali 
-                            </div>
-               </div>        
-
-          </div>               
-      </div>               
-    </div>
-    <!-- end lvl 2 -->
+   
   <?php }else{?> 
     Product Masih Belum 
   <?php } ?> 
 </div>
 <!-- end product -->
+
+  </div>
+
+<!-- end container -->
 
 <!-- <div class="chat-sess-body" id="chat-body">
     <div class="grt-close">

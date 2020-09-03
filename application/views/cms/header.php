@@ -41,15 +41,69 @@
   <body>
 
 <!-- nsearchnav -->
-<div class="search-nav" id="search-nav">
+<!-- ini buat ditampilkan di ukuran desktop -->
+<div class="search-nav d-none d-md-none d-lg-block" id="search-nav">
+  <div class="container-custom">
+    <div class="row">
+    <div class="bag-header">
+      <div class="col-lg-3">
+          <div class="float-left">
+           
+              <h3>Coming Soon</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-5" id="cari-header" style="display:none">
+            <form action="<?php echo base_url().'search'?>" method="post" class="cari-header">
+            <i class="fa fa-search" style="margin-left:10px"></i>
+                <input type="text"  class="input-banner" placeholder="Cari disini " name="item">
+                <input
+                type="submit"
+                name="submit"
+                class="btn-bordered-icon btn-find "
+                value="Cari"
+             hidden />
+            </form>
+      </div>
+
+      <div class="col-lg-5">
+          <div class="float-right">
+            <ul class="search-right">
+              <li><a href="" style="font-weight:600">Faq</a></li>
+              <li><a href="" style="font-weight:600">Tentang</a></li>
+
+              <!-- disini buat logika jika dia masuk ke akun -->
+              <li><a class="btn btn-core white-text" href="">Masuk</a></li>
+
+              <!-- end logika login -->
+
+          </ul>
+        </div>
+      </div>
+    </div>
+<!-- end row  -->
+  </div>
+  </div>
+
+</div>
+<!-- end ukuran desktop -->
+
+<!-- ukuran mobile -->
+<div class="search-nav d-block d-md-block d-lg-none">
+  <div class="container-custom">
      <div class="float-left">
-       Judul brand
+       <div class="bag-header">
+         <h3>Coming Soon</h3>
+       </div>
      </div>
 
      <div class="float-right">
        semua ada disni
      </div>
+  </div>
 </div>
+<!-- end mobile -->
+
  <!-- end searchnav -->
 
 
