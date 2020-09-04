@@ -11,7 +11,7 @@
 <!-- end to top -->
 <!-- bagian keranjang  -->
 	<!-- bagian dekstop -->
-	<div class="keranjang">
+	<div class="keranjang" id="keranjang">
 	<?php if(count($this->cart->contents())>0){ ?>
 		<div class="item-keranjang">
 			<i class="fa fa-shopping-bag"></i>&nbsp;&nbsp;<?php echo count($this->cart->contents()); ?>&nbsp;produk
@@ -40,11 +40,44 @@
 			<div class="title-skeranjang">
 				<i class="fa fa-shopping-bag"></i>&nbsp;&nbsp;
 				<span class="tx-16"><?php echo count($this->cart->contents()); ?>&nbsp;produk</span>
+				<span class="float-right" style="cursor:pointer" id="tutup-keranjang">x</span>
 			</div>
 
 
 			<div class="body-skeranjang">
 				<?php if(count($this->cart->contents())>0){ ?>
+				     <!-- mulai jika ada produk di beli -->
+					 <?php foreach($this->cart->contents() as $item){ ?>
+						<div class="ket-cart-body">
+                                  <div class="ket-cb-img">
+                                    <!-- start gambar produk -->
+                                    <?php 
+                                          if($item['options']['gambar']!=""){
+                                            echo"<img src='".base_url().'dah_image/products/'.$item['options']['gambar']."' alt='product'>";
+                                          }else{
+                                              echo "<img src='".base_url()."dah_image/default/no_product.jpg' alt='product'>";
+                                          }
+                                     ?>
+                                     <!-- akhir  dari gambar -->
+
+                                    <div class="ket-cb-nama">
+                                      <a href="<?php echo base_url().'produk/'.$item['id'].'-'.create_slug($item['name']) ?>" class="tx-14"><?php echo substr(strip_tags($item['name']),0,55) ?></a>
+									  <p class="tx-14 tx-bold-600"><?php echo number_format($item['price'])?> 
+										  <span class="tx-bold-400" style="color:rgb(119, 121, 140);">x <?php echo $item['qty'] ?></span>
+										  <?php
+										 	$total_peritem=$item['price'] * $item['qty']; 
+										  ?>
+										  <span class="float-right" style="color:rgb(119, 121, 140);">Rp.<?php echo number_format($total_peritem)?></span>
+									  </p>
+                                    </div>
+
+                                    <div class="ket-cart-close">
+                                       <a href="<?php echo base_url().'index/removefromnotifcart/'.$item['rowid']; ?>" class=" diki-tooltip" data-toggle="tooltip" data-placement="top" title="Hapus Belanja"> <i class="fa fa-times"></i></a>
+                                   </div>        
+                                  </div> 
+						</div>				  
+                                 <?php }?>
+					 <!-- end produk dibeli -->
 
 				<?php }else{?>	
 					<div class="logo-kosong">
@@ -55,13 +88,13 @@
 			</div>
 			
 			<?php if(count($this->cart->contents())>0){ ?>
-				<a class="footer-skeranjang" href="">
+				<a class="footer-skeranjang" href="<?php echo base_url().'index/pembayaran' ?>">
 						<span class="white-text" style="margin-left:30px">Bayar Sekarang</span>
 						<span class="harga-skj"><?php echo "Rp.". number_format($this->cart->total()) ?></span>
 				</a>
 			<?php }else{?>	
 				<a class="footer-skeranjang" href="">
-						<span class="white-text" style="margin-left:30px">Bayar Sekarang</span>
+						<span class="white-text" style="margin-left:30px">Belanja Dulu Yuk</span>
 						<span class="harga-skj">Rp.0</span>
 				</a>
 			<?php } ?>	
@@ -442,6 +475,20 @@
     <script src="<?php echo base_url(); ?>assets_front/js/prodsli.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js"></script>
 
+
+	<script>
+		// keranjang show
+		$(document).ready(function () {
+			$("#keranjang").click(function (e) { 
+				$('.show-keranjang').css("display","block");
+				
+			});
+			$("#tutup-keranjang").click(function (e) { 
+				$('.show-keranjang').css("display","none");
+			});
+		});
+	</script>
+	
     <script>
       $( function() {
         $( "#draggable" ).draggable();

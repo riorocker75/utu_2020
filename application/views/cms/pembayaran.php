@@ -142,14 +142,9 @@
                                    
                                
                                 </div>
-                            </div>  
-                        </div>
-
-                         <!-- sidebar detail -->
-                         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-
-                               <!-- Metode Pembayaran-->
-                               <div class="laman-bayar">
+                            </div>
+                              <!-- Metode Pembayaran-->
+                              <div class="laman-bayar">
 
                                     <div class="laman-bayar-title">
                                     <h2>Metode Pembayaran</h2>
@@ -172,25 +167,33 @@
                                         </div>      
 
                                     </div>
-                                 </div> 
-                               <!-- end metode pembayaran -->
+                                    </div> 
+                                    <!-- end metode pembayaran -->  
+                        </div>
+
+                         <!-- sidebar detail -->
+                         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+
+                             
 
                               <!-- detail ringkasan-->
-                             <div class="laman-bayar">
+                             <div>
 
-                                <div class="laman-bayar-title">
-                                <h2>Ringkasan pembayaran</h2>
-                                </div>  
+                             <div style="text-align:center">
+                                    Pesanan Anda
+                                </div>   
+ 
 
                                 <div class="laman-bayar-body">
                                 <?php if(count($this->cart->contents())>0){ ?>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <?php foreach($this->cart->contents() as $item){ ?>
+                                                <?php $total_peritem=$item['price'] * $item['qty']; ?>
                                             <tr>
                                                 <td class="no-padding-left no-padding-right tx-14"><?php echo $item['name'] ?></td>
                                                 <td class="text-center tx-14"><?php echo $item['qty'] ?></td>
-                                                <td class="no-padding-left no-padding-right text-right tx-14"><?php echo "Rp.". number_format($item['price']).',-' ?></td>
+                                                <td class="no-padding-left no-padding-right text-right tx-14"><?php echo "Rp.". number_format($total_peritem)?></td>
                                             </tr>
                                             <?php } ?>
                                             <tr>
@@ -212,10 +215,12 @@
                                         </table>
                                     </div>
                                     <?php }else{ ?>
-                                    
-                                        <img src="<?php echo base_url()?>dah_image/system/boxkosong.png" width="80px" style="position:relative;left:100px;right:0">
+                                        
+                                        <div class="center-img">
+                                            <img src="<?php echo base_url()?>/dah_image/default/bag-kosong.png">
+                                        </div>
 
-                                        <p class="text-center" style="opacity:0.7">Keranjang masih kosong. Ayo <a href="<?php echo base_url().'index/shop'; ?>">belanja</a>.</p>
+                                        <p class="text-center" style="opacity:0.7">Oops keranjang anda kosong. Mulai <a href="<?php echo base_url().'index/shop'; ?>">belanja</a></p>
                                          <?php } ?>
                                             </div>
                                          
@@ -262,21 +267,24 @@
                        
                          <!-- sidebar detail -->
                          <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                             <div class="laman-bayar">
+                             <div>
 
-                                <div class="laman-bayar-title">
-                                <h2>Ringkasan pembayaran</h2>
+                                <div style="text-align:center">
+                                    Pesanan Anda
                                 </div>  
 
                                 <div class="laman-bayar-body">
                                 <?php if(count($this->cart->contents())>0){ ?>
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table" style="font-size:13px">
                                 <?php foreach($this->cart->contents() as $item){ ?>
+                                    <?php
+                                        $total_peritem=$item['price'] * $item['qty']; 
+                                    ?>
                                 <tr>
                                     <td class="no-padding-left no-padding-right"><?php echo $item['name'] ?></td>
                                     <td class="text-center"><?php echo $item['qty'] ?></td>
-                                    <td class="no-padding-left no-padding-right text-right"><?php echo "Rp.". number_format($item['price']).',-' ?></td>
+                                    <td class="no-padding-left no-padding-right text-right"><?php echo "Rp.". number_format($total_peritem) ?></td>
                                 </tr>
                                 <?php } ?>
                                 <tr>

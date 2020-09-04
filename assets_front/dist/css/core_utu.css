@@ -562,7 +562,7 @@ body {
 }
 
 .ket-cart-body {
-  padding: 15px 10px;
+  padding: 10px 20px;
 }
 
 .ket-cart-close {
@@ -603,13 +603,14 @@ body {
   -webkit-box-direction: normal;
   flex-flow: row wrap;
   padding: 5px 5px;
-  border-bottom: 1px solid #dddfe0;
   margin-top: 8px;
+  border-radius: 8px;
 }
 
 .ket-cb-img img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
 }
 
 .ket-cb-nama {
@@ -620,17 +621,17 @@ body {
   -ms-flex-item-align: start;
   align-self: flex-start;
   padding: 0px 5px 5px 10px !important;
-  margin-top: -7px;
   line-height: 18px;
   margin-bottom: -15px;
 }
 
 .ket-cb-nama a {
-  color: #c2185b !important;
+  color: #000 !important;
 }
 
-.ket-cb-nama a:hover {
-  color: #ec407a !important;
+.ket-cb-nama p {
+  margin-top: 5px;
+  color: #019376;
 }
 
 .ket-cart-total {
@@ -1380,22 +1381,4 @@ body {
 .nolog-inv-body {
   padding: 0 10px;
   margin-top: 15px;
-}
-
-.keranjangs {
-  position: fixed !important;
-  bottom: 230px;
-  right: 20px;
-  width: 132px;
-  height: 132px;
-  background: #00897b;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  z-index: 1051;
-  display: block;
-  cursor: pointer;
-  opacity: 0;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.4s ease-in-out 0s;
 }

@@ -136,60 +136,65 @@
                                    
                                
                                 </div>
+
                             </div>  
-                        </div>
 
-                         <!-- sidebar detail -->
-                         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-
-                               <!-- Metode Pembayaran-->
-                               <div class="laman-bayar">
-
-                                    <div class="laman-bayar-title">
-                                    <h2>Metode Pembayaran</h2>
-                                    </div>  
-
-                                    <div class="laman-bayar-body">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <Label>Transfer ke rekening bank</label>
-                                                <div class="select-formg">
-                                                    <select class="select-fgp" name="rek_bank" required="required">
-                                                        <option selected>Pilih Bank</option>
-                                                        <option value="bm1">Bank Mandiri (9892019)</option>
-                                                        <option value="bm2">Bank BRI (679199009)</option>
-                                                        <option value="bm3">Bank BNI (87900908)</option>
-                                                    </select>
-                                                    <i class="fas fa-money-bill    "></i>
-                                                </div>
-                                            </div>      
-                                        </div>      
-
-                                    </div>
-                                 </div> 
-                               <!-- end metode pembayaran -->
-
-                              <!-- detail ringkasan-->
+                             <!-- Metode Pembayaran-->
                              <div class="laman-bayar">
 
                                 <div class="laman-bayar-title">
-                                <h2>Ringkasan pembayaran</h2>
+                                <h2>Metode Pembayaran</h2>
                                 </div>  
+
+                                <div class="laman-bayar-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <Label>Transfer ke rekening bank</label>
+                                        <div class="select-formg">
+                                            <select class="select-fgp" name="rek_bank" required="required">
+                                                <option selected>Pilih Bank</option>
+                                                <option value="bm1">Bank Mandiri (9892019)</option>
+                                                <option value="bm2">Bank BRI (679199009)</option>
+                                                <option value="bm3">Bank BNI (87900908)</option>
+                                            </select>
+                                            <i class="fas fa-money-bill    "></i>
+                                        </div>
+                                    </div>      
+                                </div>      
+
+                                </div>
+                                </div> 
+                                <!-- end metode pembayaran -->
+                        </div>
+
+                         <!-- sidebar detail -->
+                         <div class="col-lg-4 col-md-6 col-sm-12 col-12" >
+
+                              
+
+                              <!-- detail ringkasan-->
+                             <div >
+
+                             <div style="text-align:center">
+                                    Pesanan Anda
+                                </div>   
 
                                 <div class="laman-bayar-body">
                                 <?php if(count($this->cart->contents())>0){ ?>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <?php foreach($this->cart->contents() as $item){ ?>
+                                                <?php $total_peritem=$item['price'] * $item['qty']; ?>
+
                                             <tr>
                                                 <td class="no-padding-left no-padding-right tx-14"><?php echo $item['name'] ?></td>
                                                 <td class="text-center tx-14"><?php echo $item['qty'] ?></td>
-                                                <td class="no-padding-left no-padding-right text-right tx-14"><?php echo "Rp.". number_format($item['price']).',-' ?></td>
+                                                <td class="no-padding-left no-padding-right text-right tx-14"><?php echo "Rp.". number_format($total_peritem) ?></td>
                                             </tr>
                                             <?php } ?>
                                             <tr>
                                                 <td colspan="2" class="text-right tx-14">Total</td>
-                                                <td class="pembayaran-total no-padding-left no-padding-right text-right text-bold tx-14" id="<?php echo $this->cart->total(); ?>"><?php echo "Rp.". number_format($this->cart->total()).',-' ?></td>
+                                                <td class="pembayaran-total no-padding-left no-padding-right text-right text-bold tx-14" id="<?php echo $this->cart->total(); ?>"><?php echo "Rp.". number_format($this->cart->total()) ?></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="2" class="text-right tx-14">Ongkos Kirim</td>

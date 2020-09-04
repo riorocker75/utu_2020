@@ -499,7 +499,7 @@ body {
 }
 
 .ket-cart-body {
-	padding: 15px 10px;
+	padding: 10px 20px;
 }
 .ket-cart-close{
 	padding: 3px 3px 3px 2px;
@@ -534,12 +534,13 @@ body {
 	-webkit-box-direction: normal;
 	flex-flow: row wrap;
 	padding: 5px 5px;
-	border-bottom: 1px solid #dddfe0;
 	margin-top: 8px;
-
+	border-radius: 8px;
 	img {
-		width: 50px;
-		height: 50px;
+		width: 60px;
+		height: 60px;
+	border-radius: 8px;
+
 	}
 }
 .ket-cb-nama {
@@ -550,15 +551,19 @@ body {
 	-ms-flex-item-align: start;
 	align-self: flex-start;
 	padding: 0px 5px 5px 10px !important;
-	margin-top: -7px;
+	// margin-top: -5px;
 	line-height: 18px;
 	margin-bottom: -15px;
 
 	a {
-		color: #c2185b !important;
+		color: #000 !important;
 	}
-	a:hover {
-		color: #ec407a !important;
+	// a:hover {
+	// 	color: #ec407a !important;
+	// }
+	p{
+		margin-top:5px;
+		color:$core-co;
 	}
 }
 
