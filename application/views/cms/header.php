@@ -69,8 +69,8 @@
       <div class="col-lg-5">
           <div class="float-right">
             <ul class="search-right">
-              <li><a href="" style="font-weight:600">Faq</a></li>
-              <li><a href="" style="font-weight:600">Tentang</a></li>
+              <li><a href="" style="font-weight:600">Pesanan</a></li>
+              <li><a href="<?php echo base_url()?>/index/tentang" style="font-weight:600">Tentang</a></li>
 
               <!-- disini buat logika jika dia masuk ke akun -->
               <li><a class="btn btn-core white-text" href="">Masuk</a></li>

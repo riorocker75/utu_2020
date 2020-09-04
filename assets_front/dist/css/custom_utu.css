@@ -357,8 +357,8 @@
 .prod-index {
   background: #fff;
   max-width: 100%;
-  height: 320px;
-  margin-bottom: 20px;
+  height: 420px;
+  margin-bottom: 30px;
   padding: 0;
   border-radius: 6px;
   display: block;
@@ -377,14 +377,12 @@
   text-align: center;
   display: none;
   max-width: 100%;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   font-weight: 600;
 }
 
 .prod-index:hover {
   border: 1px solid #4caf50;
-  border-radius: 2px 2px 0 0;
+  border-radius: 6px 6px 0 0;
 }
 
 .prod-index:hover .prod-stats {
@@ -392,7 +390,7 @@
   z-index: 1;
   border: 1px solid #ff5722;
   border-top: 0;
-  border-radius: 0 0  2px 2px;
+  border-radius: 0 0  6px 6px;
 }
 
 a.prod-price {
@@ -1296,83 +1294,6 @@ a.prod-price {
           box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
-.button-3d {
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  background-color: #538fbe;
-  padding: 8px 20px;
-  font-size: 14px;
-  border: 1px solid #2d6898;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#4984b4), to(#619bcb));
-  background-image: linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
-  background-image: -ms-linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4984b4), color-stop(1, #619bcb));
-  border-radius: 5px;
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 3px rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 3px rgba(255, 255, 255, 0.5);
-  -webkit-transition: all 0.1s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.button-3d:hover {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#4f8ebf), to(#66a6d6));
-  background-image: linear-gradient(bottom, #4f8ebf 0%, #66a6d6 100%);
-  background-image: -ms-linear-gradient(bottom, #4f8ebf 0%, #66a6d6 100%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4f8ebf), color-stop(1, #66a6d6));
-}
-
-.button-3d:active {
-  -webkit-box-shadow: 0px 2px 0px #2b638f, 0px 1px 6px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 3px rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 2px 0px #2b638f, 0px 1px 6px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 3px rgba(255, 255, 255, 0.5);
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#589acc), to(#5a96c7));
-  background-image: linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
-  background-image: -ms-linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #589acc), color-stop(1, #5a96c7));
-  -webkit-transform: translate(0, 4px) rotateX(20deg);
-  transform: translate(0, 4px);
-}
-
-.button-3d-bor {
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  background: gray;
-  padding: 8px 20px;
-  font-size: 14px;
-  border: 1px solid #c1c2c3;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  border-radius: 5px;
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
-  -webkit-transition: all 0.1s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.button-3d-bor:hover {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)));
-  background-image: linear-gradient(bottom, rgba(255, 255, 255, 0.3) 0% rgba(255, 255, 255, 0.3) 100%);
-  background-image: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0.3) 0% rgba(255, 255, 255, 0.3) 100%);
-}
-
-.button-3d-bor:active {
-  -webkit-box-shadow: 0px 2px 0px gray, 0px 1px 6px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 3px rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 2px 0px gray, 0px 1px 6px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 3px rgba(255, 255, 255, 0.5);
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)));
-  background-image: linear-gradient(bottom, rgba(255, 255, 255, 0.3) 0% rgba(255, 255, 255, 0.3) 100%);
-  background-image: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0.3) 0% rgba(255, 255, 255, 0.3) 100%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #797b7c), color-stop(1, #595a5c));
-  -webkit-transform: translate(0, 4px) rotateX(20deg);
-  transform: translate(0, 4px);
-}
-
 .modal-login {
   top: 30%;
   left: 52%;
@@ -1764,8 +1685,8 @@ a.prod-price {
   right: 20px;
   width: 32px;
   height: 32px;
-  background: #00897b;
-  border-radius: 4px;
+  background: #fff;
+  border-radius: 50%;
   -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
   z-index: 1051;
@@ -1777,7 +1698,7 @@ a.prod-price {
 }
 
 .to-top i {
-  color: #fff;
+  color: #019376;
   font-weight: 600;
   margin-top: 8px;
 }
@@ -1817,4 +1738,124 @@ a.prod-price {
   margin-right: auto;
   max-width: 100%;
   height: 100px;
+}
+
+.keranjang {
+  height: auto;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background-color: #009e7f;
+  padding: 0px;
+  border-radius: 6px 0px 0px 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 21px 36px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 21px 36px;
+  border: 0px;
+  outline: 0px;
+  cursor: pointer;
+  position: fixed;
+  right: 0px;
+  top: 50%;
+  margin-top: -46px;
+  z-index: 50;
+}
+
+.item-keranjang {
+  margin: 15px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.total-keranjang {
+  margin: 0 5px 8px 5px;
+  background: #fff;
+  color: #019376;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.show-keranjang {
+  width: 420px;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 9999;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 21px 36px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 21px 36px;
+  -webkit-transition: all 0.35s ease-in-out 0s;
+  transition: all 0.35s ease-in-out 0s;
+  display: block;
+}
+
+.title-skeranjang {
+  padding: 15px 20px;
+  border-bottom: 1px solid #c1c2c3;
+  background: #fafafa;
+  font-size: 18px;
+  color: #019376;
+}
+
+.body-skeranjang {
+  height: 100%;
+  max-height: calc(100vh - 280px);
+}
+
+.footer-skeranjang {
+  height: 48px;
+  width: calc(100% - 30px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  background-color: #009e7f;
+  padding: 0;
+  border-radius: 48px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+  border: 0px;
+  outline: 0px;
+  cursor: pointer;
+  margin-left: 15px;
+  margin-bottom: 45px;
+}
+
+.harga-skj {
+  border-radius: 48px;
+  width: auto;
+  height: 43px;
+  background: #fff;
+  padding: 10px;
+  margin-right: 3px;
+  color: #019376;
+}
+
+.logo-kosong {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.logo-kosong img {
+  max-width: 100%;
 }

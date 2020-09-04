@@ -1,9 +1,74 @@
 
+
+
+
 <!-- to top -->
 <div class="to-top text-center">
 	<i class="fa fa-arrow-up " aria-hidden="true"></i>
 </div>
+
+
 <!-- end to top -->
+<!-- bagian keranjang  -->
+	<!-- bagian dekstop -->
+	<div class="keranjang">
+	<?php if(count($this->cart->contents())>0){ ?>
+		<div class="item-keranjang">
+			<i class="fa fa-shopping-bag"></i>&nbsp;&nbsp;<?php echo count($this->cart->contents()); ?>&nbsp;produk
+		</div>
+		<div class="total-keranjang">
+		<?php echo "Rp.". number_format($this->cart->total()).',-' ?>
+		</div>
+	<?php }else{?>
+		<div class="item-keranjang">
+			<i class="fa fa-shopping-bag"></i>&nbsp;&nbsp;<?php echo count($this->cart->contents()); ?>&nbsp;produk
+		</div>
+		<div class="total-keranjang">
+			Belanja yuk
+		</div>
+	<?php }?>		
+	</div>
+	<!-- end desktop -->
+
+	<!-- bagian mobile -->
+
+	<!-- end mobile -->
+
+
+	<!-- show keranjang -->
+		<div class="show-keranjang">
+			<div class="title-skeranjang">
+				<i class="fa fa-shopping-bag"></i>&nbsp;&nbsp;
+				<span class="tx-16"><?php echo count($this->cart->contents()); ?>&nbsp;produk</span>
+			</div>
+
+
+			<div class="body-skeranjang">
+				<?php if(count($this->cart->contents())>0){ ?>
+
+				<?php }else{?>	
+					<div class="logo-kosong">
+						<img src="<?php echo base_url()?>/dah_image/default/bag-kosong.png" alt="">
+					</div>
+					<p style="margin-top:60px;text-align:center;color:rgb(119, 121, 140);">Keranjang kosong nih</p>
+				<?php } ?>	
+			</div>
+			
+			<?php if(count($this->cart->contents())>0){ ?>
+				<a class="footer-skeranjang" href="">
+						<span class="white-text" style="margin-left:30px">Bayar Sekarang</span>
+						<span class="harga-skj"><?php echo "Rp.". number_format($this->cart->total()) ?></span>
+				</a>
+			<?php }else{?>	
+				<a class="footer-skeranjang" href="">
+						<span class="white-text" style="margin-left:30px">Bayar Sekarang</span>
+						<span class="harga-skj">Rp.0</span>
+				</a>
+			<?php } ?>	
+
+		</div>
+	<!-- end show -->
+<!-- end keranjang -->
 
 <div class="modal-cart modal fade" tabindex="-1" role="dialog">
 	<div class="modal-dialog" role="document">
