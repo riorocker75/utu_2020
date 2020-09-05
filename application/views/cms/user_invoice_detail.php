@@ -13,10 +13,9 @@
 
 <!-- end breadcrumb -->
 
-
 <section class="user-profile">
-
-  <div class="row">
+	
+	<div class="row">
       <div class="col-lg-10 offset-lg-1 col-sm-10 offset-sm-1 col-12">
           <div class="row">
               <div class="col-lg-3 col-md-3 col-sm-12 col-12">
@@ -24,6 +23,8 @@
               </div>
 
               <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+					<?php show_alert(); ?>
+
                   <div class="user-sb-main">
                       <div class="user-sb-main-title">
 							<p>
@@ -40,6 +41,7 @@
 					  <?php } ?>
 					
 					  <!-- info invoice -->
+
 					  <div class="user-sb-main-body" style="margin-top:-10px">
 							<div class="row">
 								<div class="col-lg-3 col-md-3 col-12">
@@ -74,15 +76,11 @@
 						<div style="margin:20px 0">
 							<h2 class="tx-22">Detail Pesanan</h2>
 						</div>	
-					<table>
+					<table class="det-pr">
 						<tbody>
 							<tr>
-								<td>
-										Total Item 
-								</td>
-								<td>
-									<?php echo $total_order?>
-								</td>
+								<td>Total Produk</td>
+								<td><?php echo $total_order?></td>
 							</tr>
 							<tr>
 								<td>Tanggal Pesan </td>
@@ -90,85 +88,64 @@
 							</tr>
 
 							<tr>
-								<td>Alamat Pengiriman </td>
+								<td>Alamat Pengiriman&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 								<td><?php echo $i->alamat; ?>,  <?php echo $i->kecamatan; ?>, <?php echo tampil_kota($i->kota); ?>, <?php echo tampil_provinsi($i->provinsi); ?></td>
 							</tr>
 
 							<tr>
-								<td>Rekening Pembayaran&nbsp;&nbsp;&nbsp;&nbsp;</td>
-								<td>
-									<?php if($i->rek_bank == "bm1"){?>
-											<span class="text-semibold">Bank &nbsp;:  &nbsp; Bank Mandiri</span>
-										<?php }elseif($i->rek_bank =="bm2"){?>
-											<span class="text-semibold">Bank &nbsp;:  &nbsp; Bank BRI</span>
-										<?php }elseif($i->rek_bank =="bm3"){?>
-											<span class="text-semibold">Bank &nbsp;:  &nbsp; Bank BNI</span>
-										<?php }?>	
-								</td>
+								<td>Kurir</td>
+								<td><?php echo $i->kurir; ?></td>
 							</tr>
 						</tbody>
 					</table>
 						
 					</div>
 
-					<div class="table-responsive">
-						<table class="table table-lg">
-							<thead>
-								<tr>
-									<th>Produk</th>
-									<th class="col-sm-2 text-center">Harga</th>
-									<th class="col-sm-1 text-center">Jumlah</th>
-									<th class="col-sm-2 text-center">Total</th>
-								</tr>
-							</thead>
-							<tbody>
-								<?php
-								foreach($barang as $b){
-									?>
-									<tr>
-										<td>
-											<h6 class="no-margin tx-14"><?php echo $b->prod_name; ?></h6>
-											<span class="text-muted"></span>
-										</td>
-										<td class="text-center tx-14"><?php echo "Rp. ". number_format($b->order_harga)." ,-"; ?></td>
-										<td class="text-center tx-14"><?php echo $b->order_jumlah; ?></td>
-										<td class="text-center tx-14"><span class="text-semibold"><?php echo "Rp. ".number_format($b->order_jumlah*$b->order_harga)." ,-"; ?></span></td>
-									</tr>
-									<?php } ?>
-								</tbody>
-							</table>
+					<div style="margin:20px 0">
+							<h2 class="tx-22">Total Belanja</h2>
 						</div>
+					
+						<table class="det-pr">
+						<tbody>
+							<tr>
+								<td>Sub Total</td>
+								<td><?php if($subtotal>0){echo "Rp. ".number_format($subtotal);} ?></td>
+							</tr>
+							<tr>
+								<td>Rekening Pembayaran&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td>
+									<?php if($i->rek_bank == "bm1"){?>
+											<span class="text-semibold">Bank Mandiri (8653362)</span>
+										<?php }elseif($i->rek_bank =="bm2"){?>
+											<span class="text-semibold">Bank BRI (936723145099)</span>
+										<?php }elseif($i->rek_bank =="bm3"){?>
+											<span class="text-semibold">Bank BNI (1312567890)</span>
+										<?php }?>	
+								</td>
+							</tr>
+							<tr>
+								<td>Biaya Kirim</td>
+								<td>Rp. <?php echo number_format($i->ongkir) ?></td>
+							</tr>
 
-						<div class="panel-body">
+							<tr>
+								<td>Total Bayar</td>
+								<td>
+								<?php echo "Rp. ".number_format($i->ongkir+$subtotal); ?>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					
+
+						<div class="panel-body" style="margin-top:90px">
 							<div class="row invoice-payment">
 								<div class="col-sm-7">
 
 								</div>
 
-								<div class="col-sm-5">
-									<div class="content-group">
-										<h6>Total bayar</h6>
-										<div class="table-responsive no-border">
-											<table class="table">
-												<tbody>
-													<tr class="tx-14">
-														<th>Subtotal :</th>
-														<td class="text-right"><?php if($subtotal>0){echo "Rp. ".number_format($subtotal)." ,-";} ?></td>
-													</tr>
-													<tr class="tx-14">
-														<th>Ongkir :</th>
-														<td class="text-right"><?php echo "Rp. ".number_format($i->ongkir)." ,-"; ?></td>
-													</tr>
-													<tr>
-														<th class="tx-14">Total Pembayaran:<br/><span class="text-muted">(Subtotal + Ongkir)</span></th>
-														<td class="text-right text-primary"><h5 class="tx-bold-700 tx-14"><?php echo "Rp. ".number_format($i->ongkir+$subtotal)." ,-"; ?></h5></td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-
-									</div>
-								</div>
+								
 							</div>
 
 							<h6>Informasi penting</h6>

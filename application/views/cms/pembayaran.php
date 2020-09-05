@@ -166,7 +166,7 @@
                                                 <Label>Transfer ke rekening bank</label>
                                                 <div class="select-formg">
                                                     <select class="select-fgp" name="rek_bank" required="required">
-                                                        <option selected>Pilih Bank</option>
+                                                        <option selected value="">Pilih Bank</option>
                                                         <option value="bm1">Bank Mandiri (9892019)</option>
                                                         <option value="bm2">Bank BRI (679199009)</option>
                                                         <option value="bm3">Bank BNI (87900908)</option>

@@ -601,7 +601,7 @@ class Index extends CI_Controller {
 				);
 			$this->m_dah->insert_data($inv,'invoice');
 			$id_terakhir = $this->db->insert_id();
-			$no = "#UMBI-00".$id_terakhir;
+			$no = "#XKM-00".$id_terakhir;
 			$w = array(
 				'id' => $id_terakhir
 				);
@@ -683,7 +683,7 @@ class Index extends CI_Controller {
 
 			if($this->email->send())
 			{
-				redirect(base_url().'user/invoice/?alert=order-sukses');
+				redirect(base_url().'user/invoice_detail/'.$id_terakhir.'/?alert=order-sukses');
 			}else
 			{
 				echo "gagal";
@@ -770,7 +770,7 @@ function order_nolog(){
 			);
 		$this->m_dah->insert_data($inv,'invoice');
 		$id_terakhir = $this->db->insert_id();
-		$no = "#UMBI-00".$id_terakhir;
+		$no = "#XKM-00".$id_terakhir;
 		$w = array(
 			'id' => $id_terakhir
 			);
