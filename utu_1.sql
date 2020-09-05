@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2019 at 03:44 PM
+-- Generation Time: Sep 05, 2020 at 09:53 AM
 -- Server version: 10.1.38-MariaDB
--- PHP Version: 7.1.28
+-- PHP Version: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `utu_baru`
+-- Database: `utu_1`
 --
 
 -- --------------------------------------------------------
@@ -289,7 +289,7 @@ CREATE TABLE `dah_users` (
 --
 
 INSERT INTO `dah_users` (`user_id`, `user_name`, `user_email`, `user_login`, `user_pass`, `user_level`, `user_status`) VALUES
-(1, 'Ferdian Alghazali', 'ferdian@gmail.com', 'diki', 'dffaa4c60a250f19dc4a79b1d05c8d53', 'admin', 1),
+(1, 'Ferdian Alghazali', 'ferdian@gmail.com', 'diki', '43b93443937ea642a9a43e77fd5d8f77', 'admin', 1),
 (2, 'muzanni', 'moezanni@gmail.com', 'muzanni', '0192023a7bbd73250516f069df18b500', 'admin', 1),
 (3, 'Azizi', 'tesdaftar@admin.com', 'pembeli', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'author', 1),
 (4, 'musliadi', 'akun@gmail.com', 'akun', 'ef9b53e0cf5c33b09139e641fee8bd96', 'author', 1);
@@ -1604,6 +1604,7 @@ CREATE TABLE `invoice` (
   `user_id` int(11) NOT NULL,
   `nama` varchar(255) DEFAULT NULL,
   `telp` varchar(255) DEFAULT NULL,
+  `email` text NOT NULL,
   `metode` varchar(20) DEFAULT NULL,
   `alamat` text NOT NULL,
   `kurir` varchar(255) DEFAULT NULL,
@@ -1623,9 +1624,9 @@ CREATE TABLE `invoice` (
 -- Dumping data for table `invoice`
 --
 
-INSERT INTO `invoice` (`id`, `no`, `tgl`, `user_id`, `nama`, `telp`, `metode`, `alamat`, `kurir`, `pembayaran`, `rek_bank`, `ongkir`, `resi`, `slip`, `status`, `kota`, `kecamatan`, `provinsi`, `kodepos`) VALUES
-(17, '#UMBI-0017', '2019-09-20', 75, 'hasan', '092271141611', NULL, 'hagu teungah, kota lhokseumawe', 'pos - Paket Kilat Khusus', 73000, 'bm1', 52000, NULL, NULL, 0, '235', 'Banda Sakti', '21', 24253),
-(18, '#UMBI-0018', '2019-09-26', 76, 'Muhammad Syah', '098765432112', NULL, 'Jalan Kenari nomer 5 Banda Sakti', 'pos - Paket Kilat Khusus', 64300, 'bm1', 52000, NULL, NULL, 0, '235', 'Banda Sakti', '21', 2431);
+INSERT INTO `invoice` (`id`, `no`, `tgl`, `user_id`, `nama`, `telp`, `email`, `metode`, `alamat`, `kurir`, `pembayaran`, `rek_bank`, `ongkir`, `resi`, `slip`, `status`, `kota`, `kecamatan`, `provinsi`, `kodepos`) VALUES
+(17, '#UMBI-0017', '2019-09-20', 75, 'hasan', '092271141611', '', NULL, 'hagu teungah, kota lhokseumawe', 'pos - Paket Kilat Khusus', 73000, 'bm1', 52000, NULL, NULL, 0, '235', 'Banda Sakti', '21', 24253),
+(18, '#UMBI-0018', '2019-09-26', 76, 'Muhammad Syah', '098765432112', '', NULL, 'Jalan Kenari nomer 5 Banda Sakti', 'pos - Paket Kilat Khusus', 64300, 'bm1', 52000, NULL, NULL, 0, '235', 'Banda Sakti', '21', 2431);
 
 -- --------------------------------------------------------
 
@@ -1763,7 +1764,8 @@ INSERT INTO `user` (`id`, `email`, `nama`, `password`, `status`, `telp`, `alamat
 (74, 'tesdaftarlagi@admin.com', 'Shalan Nasution', '3fc0a7acf087f549ac2b266baf94b8b1', 1, '085287990', 'Jalan Aksarsf', 'Aceh Tenggara', 'Blangkejeren', 'Aceh tenggara', NULL, 321344),
 (75, 'admin@gmail.com', 'admin', '0192023a7bbd73250516f069df18b500', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (76, 'jamalpdh@gmail.com', 'jalamal', '325077d1d7b6fa325b095fb212f3bc42', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(77, 'indra.ib.budi@gmail.com', 'ib', 'df8f614e30e694c4670859a5f6368734', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(77, 'indra.ib.budi@gmail.com', 'ib', 'df8f614e30e694c4670859a5f6368734', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(78, 'tesdulu@tes.com', 'cobacuy', 'd8578edf8458ce06fbc5bb76a58c5ca4', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -1951,7 +1953,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -42,3 +42,17 @@ $(document).ready(function() {
 	});
 // end to the top
 
+// bagian harga di pembayaran
+$(document).ready(function () {
+	var nblatas= $("#nbl");
+	$(window).scroll(function(){
+		var lengket =$(this).scrollTop();
+		if(lengket > 180){
+			$(nblatas).css("top", "100px");
+		}else{
+			$(nblatas).css("top", "0");
+		}
+	});
+});
+// end bagian pemayara
+

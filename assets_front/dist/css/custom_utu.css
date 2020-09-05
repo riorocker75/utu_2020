@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Noto+Serif&display=swap);
+@import url(http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
 @import url("font-text/medium-font.css");
 @import url("font-text/medium-ori.css");
 @import url("font-text/roboto-dr.css");
@@ -1411,13 +1412,11 @@ a.prod-price {
 }
 
 .user-sb-main-title {
-  border-bottom: 1px solid #d1d2d3;
   padding: 15px 20px;
 }
 
 .user-sb-main-title h2 {
   font-size: 22px;
-  font-weight: 600;
   line-height: 1;
 }
 
@@ -1444,26 +1443,68 @@ a.prod-price {
 }
 
 .laman-bayar {
-  padding: 0 0 10px 0;
   background: #fff;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  position: relative;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 16px 0px;
+          box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 16px 0px;
+  border-radius: 8px;
   margin-bottom: 20px;
 }
 
-.laman-bayar-title {
-  padding: 15px 15px;
-  border-bottom: 1px solid #dddfe0;
-  background: #FAFAFA;
+.none-laman-bayar {
+  z-index: inherit;
 }
 
-.laman-bayar-title h2 {
+.laman-bayar-title {
+  font-family: Lato, sans-serif;
+  color: #0d1136;
+  padding: 25px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
   font-size: 20px;
+  font-weight: 400;
 }
 
 .laman-bayar-body {
-  padding: 20px 15px;
+  padding: 10px 15px;
+}
+
+.det-pes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.det-pes-title {
+  -ms-flex-preferred-size: 210px;
+      flex-basis: 210px;
+  max-width: 210px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+  color: #0d1136;
+  line-height: 1.2;
+  display: block;
+  margin: 0px;
+}
+
+.det-pes-title::after {
+  content: ":";
+  position: absolute;
+  top: -1px;
+  right: -2px;
+  line-height: 1;
+}
+
+.det-pes-isi {
+  padding-left: 50px;
 }
 
 .cat-index {
@@ -1814,8 +1855,6 @@ a.prod-price {
   -webkit-transition: all 0.35s ease-in-out 0s;
   transition: all 0.35s ease-in-out 0s;
   display: none;
-  -webkit-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
 }
 
 .title-skeranjang {

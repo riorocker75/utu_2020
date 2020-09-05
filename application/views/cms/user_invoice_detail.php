@@ -26,140 +26,89 @@
               <div class="col-lg-8 col-md-8 col-sm-12 col-12">
                   <div class="user-sb-main">
                       <div class="user-sb-main-title">
-                        <p>
-                         <h2>Detail invoice</h2>
-                        </p> 
-                        </div>
+							<p>
+							<h2>Invoice Bayar</h2>
+							</p> 
+						
+						</div>
 						<?php foreach($invoice as $i){ ?>
 
 						<?php if($i->status != "3" && $i->status != "4" ){ ?>	
-                      <div class="user-sb-main-body" style="margin-top:10px">
-						<form action="<?php echo base_url().'user/upload_slip' ?>" method="post">
-						<p class="text-muted">Silahkan upload bukti pembayaran pada form di bawah ini. Selanjutnya pembayaran akan di periksa untuk di lanjutkan ke tahap selanjutnya.</p>
-							<br/>
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label>Bukti pembayaran</label>
-										<input type="hidden" name="id_inv" value="<?php echo $i->id; ?>">
-										<input type="file" name="slip" accept="image/*">
-										<?php echo "<span class='text-warning'>".form_error('slip')."</span>"; ?>
-									</div>
-								</div>
-								<div class="col-sm-12">
-									<div class="form-group">
-										<input type="submit" value="Upload" class="btn btn-sm btn-primary">
-									</div>
-								</div>
-							</div>		
-						</form>
-					  </div>
+							<div class="user-sb-main-body" style="margin-top:-10px">
+								<p>Terima Kasih. Pesanan anda telah kami terima </p>
+							</div>
 					  <?php } ?>
 					
 					  <!-- info invoice -->
-					  <div class="user-sb-main-body" style="margin-top:10px">
-					  
-				
-					  <button type="button" class="button-3d-bor float-right"><i class="icon-file-check position-left"></i><i class="fa fa-print"></i> Cetak / Unduh</button>
-						<br>
-						<br>
-							
-					
-					
-
-					<div class="panel-body no-padding-bottom">
-						<div class="row">
-							<div class="col-sm-6 content-group tx-14">
-								<ul class="list-condensed list-unstyled">
-									<li>SerbaUmbi.com</li>
-									<li>Indonesia</li>
-									<li>+62853-6008-0642</li>
-								</ul>
-							</div>
-
-							<div class="col-sm-6 content-group">
-								<div class="invoice-details">
-									<h5 class="text-uppercase tx-bold-600 tx-14">Invoice <?php echo $i->no; ?></h5>
-									<ul class="list-condensed list-unstyled">
-										<li class="tx-14">Tanggal:
-											<span class="text-semibold">
-												<?php
-												$phpdate = strtotime($i->tgl);
-												$mysqldate = date( 'd-M-Y', $phpdate );
-												echo $mysqldate;
-												?>
-
-											</span>
-										</li>
-										<li class="tx-14">Status:
-											<span class="text-semibold">
-												<?php
-												if($i->status == 0){
-													echo "<span class='tx-11 labil labil-warning'>Menunggu pembayaran</span>";
-												}else if($i->status == 1){
-													echo "<span class='tx-11 labil labil-default'>Menunggu konfirmasi</span>";
-												}else if($i->status == 2){
-													echo "<span class='tx-11 labil labil-danger'>Di tolak</span>";
-												}else if($i->status == 3){
-													echo "<span class='tx-11 labil labil-primary'>Di proses</span>";
-												}else if($i->status == 4){
-													echo "<span class='tx-11 labil labil-success'>Di bayar</span>";
-												}
-												?>
-											</span>
-										</li>
-									</ul>
+					  <div class="user-sb-main-body" style="margin-top:-10px">
+							<div class="row">
+								<div class="col-lg-3 col-md-3 col-12">
+									<b class="tx-14">Kode Pesanan</b>
+									<p class="tx-14" style="color: rgb(66, 69, 97);"><?php echo $i->no?></p>
+								</div>
+								<div class="col-lg-3 col-md-3 col-12">
+									<b class="tx-14">Tanggal</b>
+									<p class="tx-14"  style="color: rgb(66, 69, 97);">	
+										<?php
+											$phpdate = strtotime($i->tgl);
+											$mysqldate = date( 'd M Y', $phpdate );
+											echo $mysqldate;
+										?>
+									</p>
+								</div>
+								<div class="col-lg-3 col-md-3 col-12">
+								<?php
+								foreach($barang as $b){
+									$total_order += $b->order_jumlah;
+								}
+								?>
+									<b class="tx-14">Total</b>
+									<p class="tx-14"  style="color: rgb(66, 69, 97);"><?php echo "Rp. ".number_format($i->ongkir+$subtotal); ?></p>
+								</div>
+								<div class="col-lg-3 col-md-3 col-12">
+									<b class="tx-14">Metode Bayar</b>
+									<p class="tx-14"  style="color: rgb(66, 69, 97);">Transfer Bank</p>
 								</div>
 							</div>
-						</div>
+					<div class="panel-body no-padding-bottom">
+						<div style="margin:20px 0">
+							<h2 class="tx-22">Detail Pesanan</h2>
+						</div>	
+					<table>
+						<tbody>
+							<tr>
+								<td>
+										Total Item 
+								</td>
+								<td>
+									<?php echo $total_order?>
+								</td>
+							</tr>
+							<tr>
+								<td>Tanggal Pesan </td>
+								<td><?php echo $mysqldate; ?></td>
+							</tr>
 
-						<div class="row">
-							<div class="col-md-6 col-lg-8 content-group">
-								<span class="text-muted">Invoice Untuk:</span>
-								<ul class="list-condensed list-unstyled tx-13">
-									<li><h5 class="tx-15 tx-bold-600"><?php echo $i->nama; ?></h5></li>
-									<li><span class="text-semibold"><?php echo $i->alamat; ?></span></li>
-									<li>Provinsi : <?php echo tampil_provinsi($i->provinsi); ?></li>
-									<li>Kota / Kab : <?php echo tampil_kota($i->kota); ?></li>
-									<li>Kecamatan : <?php echo $i->kecamatan; ?></li>
-									<li>Kode Pos : <?php echo $i->kodepos; ?></li>
-									<li>Tlp/HP : <?php echo $i->telp; ?></li>
-								</ul>
-								<br/>
-								<span class="text-muted">Kurir:</span>
-								<ul class="list-condensed list-unstyled">
-									<li><h4 class="tx-16 tx-bold-600"><?php echo $i->kurir; ?></h4></li>
-								</ul>
-							</div>
+							<tr>
+								<td>Alamat Pengiriman </td>
+								<td><?php echo $i->alamat; ?>,  <?php echo $i->kecamatan; ?>, <?php echo tampil_kota($i->kota); ?>, <?php echo tampil_provinsi($i->provinsi); ?></td>
+							</tr>
 
-							<div class="col-md-6 col-lg-4 content-group">
-								<p class="text-muted ">Lakukan Pembayaran Ke:</p>
-								<ul class="list-condensed list-unstyled invoice-payment-details tx-12">
-									<li>
-										<?php if($i->rek_bank == "bm1"){?>
+							<tr>
+								<td>Rekening Pembayaran&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td>
+									<?php if($i->rek_bank == "bm1"){?>
 											<span class="text-semibold">Bank &nbsp;:  &nbsp; Bank Mandiri</span>
 										<?php }elseif($i->rek_bank =="bm2"){?>
 											<span class="text-semibold">Bank &nbsp;:  &nbsp; Bank BRI</span>
 										<?php }elseif($i->rek_bank =="bm3"){?>
 											<span class="text-semibold">Bank &nbsp;:  &nbsp; Bank BNI</span>
 										<?php }?>	
-									
-									</li>
-									<li>
-										<?php if($i->rek_bank == "bm1"){?>
-											<span>No.Rek  &nbsp;: &nbsp;9892019</span>
-										<?php }elseif($i->rek_bank =="bm2"){?>
-											<span>No.Rek  &nbsp;: &nbsp;6791-9900-9989</span>
-										<?php }elseif($i->rek_bank =="bm3"){?>
-											<span>No.Rek  &nbsp;: &nbsp;87900908</span>
-										<?php }?>	
-										
-									
-									</li>
-									<li><span>A/N &nbsp;: &nbsp; Serba Umbi Sejahtera</span></li>
-								</ul>
-							</div>
-						</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+						
 					</div>
 
 					<div class="table-responsive">

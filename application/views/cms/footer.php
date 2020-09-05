@@ -122,7 +122,7 @@
 
 <!-- footer start -->
 <footer class="footer-class">
-  <div class="container">
+  <div class="container-custom">
 
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-12 col-12">
@@ -732,8 +732,8 @@
 						var cost = $(this).attr('id');
 						var total = $('.pembayaran-total').attr('id');
 						var x = parseInt(total)+parseInt(cost);
-						$('.text-ongkos-kirim').html("Rp. "+cost+" ,-");
-						$('.text-pembayaran').html("Rp. "+ x +" ,-");
+						$('.text-ongkos-kirim').html("Rp. "+cost+"");
+						$('.text-pembayaran').html("Rp. "+ x +"");
 						$('.pembayaran').val(x);
 						$('.ongkir').val(cost);
 					});
@@ -814,6 +814,7 @@ function scrollFunction() {
 }
 
    </script>
+
 
   </body>
 </html>

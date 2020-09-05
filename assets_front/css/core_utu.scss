@@ -5,9 +5,10 @@
 @import url("font-text/medium-ori.css");
 @import url("font-text/roboto-dr.css");
 @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
 
 // fonts and icons
-@import url("../assets_front/dist/css/lato-font/lato.css");
+// @import url("lato-font/lato.css");
 body {
 	background: #F7F7F7;
 	font-family: Lato, sans-serif;
@@ -288,7 +289,16 @@ body {
 	box-shadow: $box-shadow-4dp;
 }
 
-
+.bor-core-md {
+	border: 2px $core-co solid;
+	color: $core-co !important;
+}
+.bor-core-md:hover {
+	background: $core-co;
+	color: #fff !important;
+	transition: .6s;
+	box-shadow: $box-shadow-4dp;
+}
 
 .btn-u-md {
 	padding: 12px 40px;

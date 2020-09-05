@@ -26,12 +26,12 @@
                             <div class="laman-bayar">
 
                                 <div class="laman-bayar-title">
-                                <h2>Konfirmasi Pembayaran</h2>
+                                Kontak
                                 </div>  
 
                                 <div class="laman-bayar-body">    
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                                              <div class="input-group-dfv2">
 					                            <input class="input-dfv2" type="text" name="nama"  placeholder="Nama lengkap" value="<?php echo $this->session->userdata('user_nama')?>" required="required">
                                                 <i class="fa fa-id-card" aria-hidden="true"></i>
@@ -40,7 +40,7 @@
                                                 <?php echo "<span class='text-warning'>".form_error('nama')."</span>"; ?>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                                             <div class="input-group-dfv2">
                                                 <input type="text" name="telp" class="input-dfv2" placeholder="No. Telp/Hp .." value="<?php echo $this->session->userdata('user_telp')?>" required="required">
                                                   <i class="fa fa-phone" aria-hidden="true"></i>
@@ -49,105 +49,115 @@
                                         </div>
                                     </div>
 
+                                         
                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="input-group-dfv2">
-                                            
-                                            <input type="text" name="email" class="input-dfv2" placeholder="Email valid anda" value="<?php echo $this->session->userdata('user_email')?>" required="required">
-                                            <i class="fas fa-mail-bulk"></i>
-                                            <input type="hidden" name="pembayaran" class="pembayaran">
-                                            <?php echo "<span class='text-warning'>".form_error('email')."</span>"; ?>
-                                        </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="input-group-dfv2">
-                                            
-                                            <input type="text" name="alamat" class="input-dfv2" placeholder="Alamat lengkap .." value="<?php echo $this->session->userdata('user_alamat')?>" required="required">
-                                            <i class="fa fa-address-book" aria-hidden="true"></i>
-                                            <input type="hidden" name="pembayaran" class="pembayaran">
-                                            <?php echo "<span class='text-warning'>".form_error('alamat')."</span>"; ?>
-                                        </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                                            <div class="select-formg">
-                                                
-                                                <?php
-                                                $province_ori = json_decode(GetProv(), TRUE);
-                                                echo "<select name='prov_origin' required class='select-fgp form-provinsi2' id='prov_origin'>";
-                                                echo "<option value=''>Pilih Provinsi ..</option>";
-                                                for ($i=1; $i < count($province_ori['rajaongkir']['results']); $i++) {
-                                                    echo "<option value='".$province_ori['rajaongkir']['results'][$i]['province_id']."' class='jne tiki pos all' >".$province_ori['rajaongkir']['results'][$i]['province']."</option>";
-                                                }
-                                                echo "</select>";
-                                                ?>
-                                                <?php echo "<span class='text-warning'>".form_error('prov_origin')."</span>"; ?>
-                                                <i class="fas fa-city "></i> 
+                                                <div class="col-md-12">
+                                                    <div class="input-group-dfv2">
+                                                    
+                                                    <input type="text" name="email" class="input-dfv2" placeholder="Email valid anda" value="<?php echo $this->session->userdata('user_email')?>" required="required">
+                                                    <i class="fas fa-mail-bulk"></i>
+                                                    <input type="hidden" name="pembayaran" class="pembayaran">
+                                                    <?php echo "<span class='text-warning'>".form_error('email')."</span>"; ?>
+                                                </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                                             <div class="select-formg">
-                                                <?php
-                                                echo "<select name='city_origin' required class='select-fgp form-kota2' id='prov_origin'>";
-                                                echo "<option value=''>Pilih provinsi terlebih dulu</option>";
-                                                echo "</select>";
-                                                ?>
-                                                <?php echo "<span class='text-warning'>".form_error('city_origin')."</span>"; ?>
-                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                                            <div class="input-group-dfv2">
-                                                <input type="text" name="kecamatan" class="input-dfv2" placeholder="Kecamatan .." required="required">
-                                                   <i class="fas fa-home    "></i>
-                                                <?php echo "<span class='text-warning'>".form_error('kecamatan')."</span>"; ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                                            <div class="input-group-dfv2">
-                                                <input type="text" name="kodepos" class="input-dfv2" placeholder="Kode pos .." required="required">
-                                                <i class="fa fa-inbox"></i>
-                                                <?php echo "<span class='text-warning'>".form_error('kodepos')."</span>"; ?>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="input-group-dfv2"> 
-                                               <input type="text" name="catatan"class="input-dfv2" placeholder="Catatan tambahan">
-                                                <i class="fa fa-sticky-note" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="table-responsive">
-                                                <?php echo "<span class='text-warning'>".form_error('kurir')."</span>"; ?>
-                                                <div class="tempat-cost"></div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br/>
-                                   
-                               
                                 </div>
                             </div>
+                            <!-- alamat bayar -->
+                            <div class="laman-bayar">
+
+                                <div class="laman-bayar-title">
+                                Alamat Pengiriman
+                                </div>  
+                                    <div class="laman-bayar-body">    
+                                       
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="input-group-dfv2">
+                                                    
+                                                    <input type="text" name="alamat" class="input-dfv2" placeholder="Alamat lengkap .." value="<?php echo $this->session->userdata('user_alamat')?>" required="required">
+                                                    <i class="fa fa-address-book" aria-hidden="true"></i>
+                                                    <input type="hidden" name="pembayaran" class="pembayaran">
+                                                    <?php echo "<span class='text-warning'>".form_error('alamat')."</span>"; ?>
+                                                </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                                    <div class="select-formg">
+                                                        
+                                                        <?php
+                                                        $province_ori = json_decode(GetProv(), TRUE);
+                                                        echo "<select name='prov_origin' required class='select-fgp form-provinsi2' id='prov_origin'>";
+                                                        echo "<option value=''>Pilih Provinsi ..</option>";
+                                                        for ($i=1; $i < count($province_ori['rajaongkir']['results']); $i++) {
+                                                            echo "<option value='".$province_ori['rajaongkir']['results'][$i]['province_id']."' class='jne tiki pos all' >".$province_ori['rajaongkir']['results'][$i]['province']."</option>";
+                                                        }
+                                                        echo "</select>";
+                                                        ?>
+                                                        <?php echo "<span class='text-warning'>".form_error('prov_origin')."</span>"; ?>
+                                                        <i class="fas fa-city "></i> 
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                                    <div class="select-formg">
+                                                        <?php
+                                                        echo "<select name='city_origin' required class='select-fgp form-kota2' id='prov_origin'>";
+                                                        echo "<option value=''>Pilih provinsi terlebih dulu</option>";
+                                                        echo "</select>";
+                                                        ?>
+                                                        <?php echo "<span class='text-warning'>".form_error('city_origin')."</span>"; ?>
+                                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                                    <div class="input-group-dfv2">
+                                                        <input type="text" name="kecamatan" class="input-dfv2" placeholder="Kecamatan .." required="required">
+                                                        <i class="fas fa-home    "></i>
+                                                        <?php echo "<span class='text-warning'>".form_error('kecamatan')."</span>"; ?>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                                    <div class="input-group-dfv2">
+                                                        <input type="text" name="kodepos" class="input-dfv2" placeholder="Kode pos .." required="required">
+                                                        <i class="fa fa-inbox"></i>
+                                                        <?php echo "<span class='text-warning'>".form_error('kodepos')."</span>"; ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="input-group-dfv2"> 
+                                                    <input type="text" name="catatan"class="input-dfv2" placeholder="Catatan tambahan">
+                                                        <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="table-responsive">
+                                                        <?php echo "<span class='text-warning'>".form_error('kurir')."</span>"; ?>
+                                                        <div class="tempat-cost"></div>
+
+                                                    </div>
+                                                </div>
+                                            </div>   
+                                        <br/>
+                                    </div>
+                                </div>
+                            <!-- end alamat bayar -->
                               <!-- Metode Pembayaran-->
                               <div class="laman-bayar">
 
                                     <div class="laman-bayar-title">
-                                    <h2>Metode Pembayaran</h2>
+                                     Metode Pembayaran
                                     </div>  
 
                                     <div class="laman-bayar-body">
@@ -177,14 +187,14 @@
                              
 
                               <!-- detail ringkasan-->
-                             <div>
+                             <div class="none-laman-bayar sticky-top" id="nbl">
 
                              <div style="text-align:center">
                                     Pesanan Anda
                                 </div>   
  
 
-                                <div class="laman-bayar-body">
+                                <div class="laman-bayar-body ">
                                 <?php if(count($this->cart->contents())>0){ ?>
                                     <div class="table-responsive">
                                         <table class="table">
@@ -214,6 +224,12 @@
                                             </tr>
                                         </table>
                                     </div>
+                                    <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="submit" class="btn-bordered-md-fullwidth bor-core-md" value="Buat Pesanan">
+                                            </div>
+                                        </div>
+                                  
                                     <?php }else{ ?>
                                         
                                         <div class="center-img">
@@ -223,15 +239,6 @@
                                         <p class="text-center" style="opacity:0.7">Oops keranjang anda kosong. Mulai <a href="<?php echo base_url().'index/shop'; ?>">belanja</a></p>
                                          <?php } ?>
                                             </div>
-                                         
-                                            
-                                  
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input type="submit" class="btn-bordered-md-fullwidth bor-primary-md" value="Buat Pesanan">
-                                            </div>
-                                        </div>
-                                  
                                         </div>  
                                     <!-- end detail ringkasan-->
                                         
@@ -267,8 +274,7 @@
                        
                          <!-- sidebar detail -->
                          <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                             <div>
-
+                             <div class="none-laman-bayar sticky-top" id="nbl">
                                 <div style="text-align:center">
                                     Pesanan Anda
                                 </div>  
@@ -307,9 +313,11 @@
                         </div>
                         <?php }else{ ?>
                        
-                        <img src="<?php echo base_url()?>dah_image/system/boxkosong.png" width="80px" style="position:relative;left:100px;right:0">
+                            <div class="center-img">
+                                <img src="<?php echo base_url()?>/dah_image/default/bag-kosong.png">
+                             </div>
 
-                        <p class="text-center" style="opacity:0.7">Keranjang masih kosong. Ayo <a href="<?php echo base_url().'index/shop'; ?>">belanja</a>.</p>
+                             <p class="text-center" style="opacity:0.7">Oops keranjang anda kosong. Mulai <a href="<?php echo base_url().'index/shop'; ?>">belanja</a></p>
                         <?php } ?>
                                 </div>
                              </div>       
@@ -318,12 +326,8 @@
                     </div>   
                     <?php } ?>   
                     <!-- end detail bayar -->
-
-                   
                
             
-        
-      
-
     </div>
 </section>
+
