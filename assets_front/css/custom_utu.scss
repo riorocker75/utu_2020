@@ -1290,6 +1290,68 @@ transition: .15s ease-in-out;
   a{color: $core-co;}
 }
 
+.order-footer{
+  background: #fffefb;
+  padding: 15px 0;
+  position: relative;
+  display: block;
+}
+
+.body-progres{
+  width: 100%;
+  // padding:5px 20px;
+
+}
+.progress-order{
+  counter-reset: step;
+}
+
+.progress-order li {
+  list-style: none;
+  display: inline-block;
+  width: 30.33%;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+
+}
+.progress-order li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 50px;
+  height: 50px;
+  line-height : 50px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  background-color: #fff;
+  
+}
+.progress-order li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  top: 18px;
+  left: -43%;
+  z-index : -1;
+}
+.progress-order li:first-child:after {
+  content: none;
+}
+.progress-order li.active {
+  color: $danger-co;
+}
+.progress-order li.active:before {
+  border-color: $danger-co;
+} 
+.progress-order li.active + li:after {
+  background-color: $danger-co;
+  // z-index: 1;
+}
 // end pesanan side
 
 // laman pembayaran

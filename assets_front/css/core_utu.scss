@@ -69,6 +69,9 @@ body {
 
 // end container
 // social buttun
+.core-co{
+	color: #019376;
+}
 .social-btn{
 	width:30px;
 	height: 30px;
@@ -244,7 +247,14 @@ body {
 	color: #fff;
 }
 
-
+.bor-core {
+	border: 1px $core-co solid;
+	color: $core-co !important;
+}
+.bor-core:hover {
+	color: #fff !important;
+	background-color: $core-co;
+}
 .bor-primary-md {
 	border: 2px #1976d2 solid;
 	color: #1976d2 !important;

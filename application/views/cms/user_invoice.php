@@ -44,7 +44,15 @@
 								}
 								?>
 						  </span>
-                        </div>
+						</div>
+						<div class="body-progres">
+							<ul class="progress-order">
+								<li class="<?php if($p->status == 4){echo "active";}else{}?>"><span class="tx-12">Pembayaran Berhasil</span></li>
+								<li class="<?php if($p->status == 3){echo "active";}else{}?>"><span class="tx-12">Barang Dikirim</span> </li>
+								<li class="<?php if($p->status == 5){echo "active";}else{}?>"><span class="tx-12">Selesai</span> </li>
+
+							</ul>
+						</div>
 			 		 	<div class="user-sb-main-body">
 							  <?php
 									 $barang=$this->db->query("select * from dah_products,orders where dah_products.prod_id=orders.order_produk and orders.order_invoice='$p->id'")->result(); 
@@ -77,13 +85,19 @@
 												</div>
 										</div>	
 										
-										
-									
+												
 								</div>
-							<?php }?>		  
+							<?php }?>		
+							<div class="order-footer">
+								<span class="float-right">Total:  <b class="tx-22 core-co">Rp.<?php echo number_format($sub)?></b></span>
+								<br>
+							</div>
+
+
 						</div>
 				
-				</div>
+					</div>
+					<!-- end user-sb-main -->
 				  <?php } ?>	
               </div>
 			  <?php }else{ ?>

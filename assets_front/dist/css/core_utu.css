@@ -61,6 +61,10 @@ body {
   }
 }
 
+.core-co {
+  color: #019376;
+}
+
 .social-btn {
   width: 30px;
   height: 30px;
@@ -262,6 +266,16 @@ body {
 .bor-default:hover {
   background: #424242;
   color: #fff;
+}
+
+.bor-core {
+  border: 1px #019376 solid;
+  color: #019376 !important;
+}
+
+.bor-core:hover {
+  color: #fff !important;
+  background-color: #019376;
 }
 
 .bor-primary-md {
