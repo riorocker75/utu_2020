@@ -121,6 +121,9 @@ class User extends CI_Controller {
 			'user_id' => $this->session->userdata('user_id')
 			);
 		$data['invoice'] = $this->m_dah->edit_data_order($w,'invoice','id','desc')->result();
+
+	
+		
 		
 		$this->load->view('cms/header');
 		$this->load->view('cms/user_invoice',$data);
@@ -214,5 +217,15 @@ class User extends CI_Controller {
 			}
 		}
 	}
+
+
+function bantuan(){
+	$this->load->view('cms/header');
+	$this->load->view('cms/bantuan');
+	$this->load->view('cms/footer');
+}
+
+
+	// end user 
 
 }

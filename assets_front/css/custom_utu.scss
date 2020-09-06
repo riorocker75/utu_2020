@@ -1210,63 +1210,39 @@ transition: .15s ease-in-out;
   margin:50px 0 30px 0; 
 }
 .user-sidebar-profile{
-    height: 60vh;
+    height: auto;
     overflow-x: hidden;
     overflow-y: auto;
-  
+    background: #fff;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 6px;
+    border-radius: 8px;
     @media (max-width:768px){
       height: 32vh;
     }
 }
 
-.user-sb-img{
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -ms-flex-flow: row wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  padding: 5px 5px;
-  border-bottom: 1px solid #dddfe0;
-  img{
-    height: 60px;
-    width:60px;
-    border-radius: 50%;
-    margin-bottom:5px;
-  }
-}
-.user-sb-nama{
-  -ms-flex: 1 0;
-  -webkit-box-flex: 1;
-          flex: 1 0;
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  padding: 0px 5px 5px 10px !important;
-  margin-top:8px;
-  font-size: 14px;
-  font-weight: 600;
-}
 
 .user-sb-prof{
   text-decoration: none;
-  margin-left:-30px;
+  margin-left:-40px;
  
   ul{ list-style: none;}
   ul li a{
     list-style-type: none;
     display:block;
     color:#000;   
-
     i{margin-right:13px;}
   }
   li{
-    padding:8px 3px;
+    padding:20px 20px;
+    border-left:6px solid transparent;
   }
   li:hover{
     background: #fafafa;
-    a{color:#d81b60}
+    border-left:6px solid $core-co;
+
+    a{color:$core-co}
   }
 
 }
@@ -1276,6 +1252,7 @@ transition: .15s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 16px 0px;
   max-width: 100%;
   border-radius: 8px;
+  margin-bottom:20px;
 }
 .user-sb-main-title{
   padding:15px 20px;
@@ -1302,7 +1279,18 @@ transition: .15s ease-in-out;
   text-align: right;
  
 }
+
+
 // end user-profile
+
+// mulai pesanan sidebar
+.order-title{
+  padding:15px 20px;
+  margin-bottom: 1px solid #c1c2c3;
+  a{color: $core-co;}
+}
+
+// end pesanan side
 
 // laman pembayaran
 .laman-bayar{
@@ -1738,3 +1726,19 @@ appearance: none;
   }
 }
 // end keranjang
+
+
+
+
+// labil order
+
+.labil-o{
+	padding:6px 12px;
+	border-radius:6px;
+	font-size: 13px;
+    font-weight: 400;
+    color: rgb(46, 112, 250);
+    line-height: 1;
+    background-color: rgba(46, 112, 250, 0.1);
+    border-radius: 6px;
+}

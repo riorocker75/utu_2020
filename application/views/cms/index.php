@@ -269,7 +269,7 @@
 
 <!-- madal promo -->
 
-<div class="modal fade" id="promo-mod" tabindex="-1" role="dialog" aria-hidden="true">
+<!-- <div class="modal fade" id="promo-mod" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-sm modal-dialog-centered">
   
     <div class="modal-content promo-lead">
@@ -278,7 +278,7 @@
 				<a href="<?php echo base_url().'shop'?>" class="promo-pop-btn">Belanja yuk</a>
 			</div>
   </div>
-</div>
+</div> -->
 
 <!-- end modal promo -->
 

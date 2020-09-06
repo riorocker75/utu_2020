@@ -1329,9 +1329,14 @@ a.prod-price {
 }
 
 .user-sidebar-profile {
-  height: 60vh;
+  height: auto;
   overflow-x: hidden;
   overflow-y: auto;
+  background: #fff;
+  background-color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 6px;
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
@@ -1340,41 +1345,9 @@ a.prod-price {
   }
 }
 
-.user-sb-img {
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -ms-flex-flow: row wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  flex-flow: row wrap;
-  padding: 5px 5px;
-  border-bottom: 1px solid #dddfe0;
-}
-
-.user-sb-img img {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  margin-bottom: 5px;
-}
-
-.user-sb-nama {
-  -ms-flex: 1 0;
-  -webkit-box-flex: 1;
-  flex: 1 0;
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  padding: 0px 5px 5px 10px !important;
-  margin-top: 8px;
-  font-size: 14px;
-  font-weight: 600;
-}
-
 .user-sb-prof {
   text-decoration: none;
-  margin-left: -30px;
+  margin-left: -40px;
 }
 
 .user-sb-prof ul {
@@ -1392,15 +1365,17 @@ a.prod-price {
 }
 
 .user-sb-prof li {
-  padding: 8px 3px;
+  padding: 20px 20px;
+  border-left: 6px solid transparent;
 }
 
 .user-sb-prof li:hover {
   background: #fafafa;
+  border-left: 6px solid #019376;
 }
 
 .user-sb-prof li:hover a {
-  color: #d81b60;
+  color: #019376;
 }
 
 .user-sb-main {
@@ -1409,6 +1384,7 @@ a.prod-price {
           box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 16px 0px;
   max-width: 100%;
   border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .user-sb-main-title {
@@ -1440,6 +1416,15 @@ a.prod-price {
   flex-flow: row wrap;
   padding: 5px 5px;
   text-align: right;
+}
+
+.order-title {
+  padding: 15px 20px;
+  margin-bottom: 1px solid #c1c2c3;
+}
+
+.order-title a {
+  color: #019376;
 }
 
 .laman-bayar {
@@ -1885,4 +1870,15 @@ a.prod-price {
 
 .logo-kosong img {
   max-width: 100%;
+}
+
+.labil-o {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #2e70fa;
+  line-height: 1;
+  background-color: rgba(46, 112, 250, 0.1);
+  border-radius: 6px;
 }

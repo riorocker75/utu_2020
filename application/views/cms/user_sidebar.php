@@ -1,22 +1,19 @@
-<div class="user-sidebar-profile">
-	<div class="user-sb-img">
-		<img src="<?php  echo base_url(); ?>dah_image/default/pembeli.jpg">	
+<div class="user-sidebar-profile d-none d-md-none d-lg-block">
 
-		<div class="user-sb-nama">
-		<?php echo $this->session->userdata('user_nama'); ?>
-		</div>
-	</div>	
 
 	<div class="user-sb-prof">
 		<ul>
 			<li>
-			<a href="<?php echo base_url().'user'; ?>"><i class="fa fa-user-alt green-text text-accent-4"></i> Profile saya</a>	
+				<a href="<?php echo base_url().'user/invoice'; ?>" class="tx-15">Pesanan</a>
 			</li>
 			<li>
-				<a href="<?php echo base_url().'user/invoice'; ?>"><i class="fa fa-credit-card blue-text text-accent-2"></i>Transaksi pembelian </a>
+			<a href="<?php echo base_url().'user'; ?>">Profil</a>	
 			</li>
 			<li>
-				<a href="<?php echo base_url().'user/user_logout'?>"><i class="fas fa-sign-out-alt red-text text-accent-2"></i> Log out </a>	
+			<a href="<?php echo base_url().'user/bantuan'; ?>">Bantuan</a>	
+			</li>
+			<li>
+				<a href="<?php echo base_url().'user/user_logout'?>">Keluar</a>	
 			</li>
 		</ul>
 	</div>
