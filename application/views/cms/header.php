@@ -79,20 +79,25 @@
                 <li><a class="btn btn-core white-text" href="">Daftar</a></li>
 
               <?php }else{?> 
-
+                <?php
+                      $id=$this->session->userdata('user_id');
+                      $notif_inv=$this->m_dah->get_susun_invoice($id,0)->num_rows();
+                      $notif_invoices=$this->m_dah->get_susun_invoice($id,0)->result();  
+                ?>
                  <!-- notifikasi -->
                  <li class="dropdown">
                    <a data-toggle="dropdown">
                        <i class="fa fa-bell tx-18" aria-hidden="true"></i>
+                       <?php if($notif_inv > 0){ ?>
+                       <span class="notif-ang"><?php echo $notif_inv?></span>
+                       <?php }else{}?>
                    </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-custom">
                       <div class="dropdown-title">
                         Notifikasi Pesanan
                       </div>
                       <?php 
-                       $id=$this->session->userdata('user_id');
-                       $notif_inv=$this->m_dah->get_susun_invoice($id,0)->num_rows();
-                       $notif_invoices=$this->m_dah->get_susun_invoice($id,0)->result();
+ 
                         if($notif_inv > 0){ 
                       ?>
                         <?php foreach($notif_invoices as $inc){ ?>

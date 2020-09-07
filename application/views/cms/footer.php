@@ -252,7 +252,7 @@
     <div class="modal-content">
       <div class="modal-header modal-custom">
 		<h5 class="modal-title core-co tx-bold-600" >Masuk Akun</h5>
-		<p style="margin-top:15px">Masuk dengan email & password kamu</p>
+		<p style="margin-top:15px;color: rgb(119, 121, 140)">Masuk dengan email & password kamu</p>
         <!-- <button type="button" class="close float-right" data-dismiss="modal">
           <span aria-hidden="true">&times;</span>
         </button> -->
@@ -261,35 +261,22 @@
         <div class="modal-body modal-body-custom">  
         <div class="form-group">
              
-              <input type="email" class="form-control tx-14" name="email"  aria-describedby="emailHelp" placeholder="Email">
+              <input type="email" class="input-control tx-14" name="email"  aria-describedby="emailHelp" placeholder="Email">
               <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
           </div>
         <div class="form-group">
       
-          <input type="password" class="form-control tx-14" name="password" id="exampleInputPassword1" placeholder="Password">
+          <input type="password" class="input-control tx-14" name="password" id="exampleInputPassword1" placeholder="Password">
         </div>
 
-             <div class="row">
-                <div class="col-6">
-                 <a href="" class=" float-left tx-13 red-text text-darken-4 tx-bold-600">Lupa Password ?</a> 
-                 
-                </div>
-                <div class="col-6 ">
-                   <a href="<?php echo base_url().'index/user_daftar';?>" class="float-right tx-13 blue-text text-darken-2 tx-bold-600">Daftar akun</a>
-                </div>
-
-             </div>
-
-             <div class="col-12" style="margin-top:10px;">
-               <button type="submit" class="btn-login-fullwidth bor-login"> Masuk <i class="fas fa-sign-in-alt"></i></button>
+             <div  style="margin-top:10px;">
+               <button type="submit" class="btn-login">Masuk ke akun</button>
 
 			 </div>
-				 <!-- <div class="d-flex justify-content-center">
 
-				 	<a data-toggle="modal" data-target="#login-penjual" id="log-jual" class="tx-12 labil labil-success white-text" style="text-transform:none;cursor:pointer">Masuk Ke Toko</a>
-				</div> -->
-
-        
+			 <div style="margin-top:10px;text-align:center;color: rgb(119, 121, 140);margin:20px 0;" class="tx-15">
+                   Belum punya akun ? <a href="<?php echo base_url().'index/user_daftar';?>" class="core-co tx-bold-600">Daftar</a>
+                </div>
           </div>
       </form>
      

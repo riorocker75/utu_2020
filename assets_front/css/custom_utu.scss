@@ -351,7 +351,17 @@ border:none;
   border-bottom:1px solid #c1c2c3;
 }
 
+.notif-ang{
+  font-size: 9px;
+ padding: 0px 4px 0px 4px;
+ border-radius: 50%;
+ background: $danger-co;
+ color: #fff;
+ position: absolute;
+ top: -5px;
+ right: -10px;
 
+}
 // end dropdown custom
 
 
@@ -1222,10 +1232,8 @@ transition: .15s ease-in-out;
   border:0;
   text-align: center;
   margin: 0 auto;
- margin-bottom: 15px;
  margin-top: 15px;
   display: block;
-
 }
 .modal-body, .modal-body-custom{
   padding: 0 60px;
@@ -1238,6 +1246,28 @@ transition: .15s ease-in-out;
   width: 500px;
 }
 
+.input-control{
+  padding:12px 15px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid rgb(241, 241, 241);
+  transition: all 0.25s ease 0s;
+  background-color: rgb(247, 247, 247);
+  margin-bottom: 10px;
+}
+
+.input-control:focus{
+  border: 1px solid rgb(241, 241, 241);
+}
+
+.btn-login{
+  padding: 12px 15px;
+  background:$core-co;
+  color:#fff;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
 @media (max-width:576px){
   .modal-login{
     width: 400px;
@@ -1251,7 +1281,7 @@ transition: .15s ease-in-out;
   margin:30px 0;
   background: #fafafa;
   border-radius: 10px;
-  box-shadow: $box-shadow-8dp;
+  box-shadow: $smoth_shadow;
 }
 .mlg-title{
   margin-top:-10px;

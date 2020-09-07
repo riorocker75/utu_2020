@@ -10,26 +10,23 @@
 		<div class="col-lg-4 offset-lg-5 col-sm-8 offset-sm-2 col-10 offset-1">
 							<div class="main-login-form">
 
-			<div class="mlg-title">
-				<h2>Daftar Sekarang</h2>
+			<div class="mlg-title core-co tx-bold-600">
+				<h2>Daftar</h2>
 
 			</div>
 		<div class="form-group">
-		<label for="exampleInputEmail1" style="opacity:0.6">Alamat Email</label>
-		<input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" >
+		<input type="email" class="input-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
 			<small class="form-text text-muted"><span class="text-danger"><?php echo form_error('email'); ?></span></small>
 		</div>
 
 		<div class="form-group">
-		<label for="namalengkap" style="opacity:0.6">Nama Lengkap</label>
-		<input type="text" id="namalengkap" class="form-control" name="nama" >
+		<input type="text" id="namalengkap" class="input-control" name="nama" placeholder="Nama">
 		<small class="form-text text-muted"><span class="text-danger"><?php echo form_error('nama'); ?></span></small>
 
 		</div>
 
 		<div class="form-group">
-		<label for="buatpass" style="opacity:0.6">Buat Password</label>
-		<input type="password" class="form-control" id="buatpass" name="password">
+		<input type="password" class="input-control" id="buatpass" name="password" placeholder="Password">
 		<small class="form-text text-muted"><span class="text-danger"><?php echo form_error('password'); ?></span></small>
 
 		</div>
@@ -37,7 +34,7 @@
 		
 
 		<div  style="margin-top:30px;">
-			<button class="btn-login-fullwidth bor-daftar"> Daftar <i class="fas fa-sign-in-alt"></i></button>
+			<button class="btn-login"> Daftar Sekarang</button>
 
 		</div>
 
