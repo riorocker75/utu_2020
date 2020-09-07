@@ -45,6 +45,8 @@
 								?>
 						  </span>
 						</div>
+						<!-- <?php if($p->status == 4){echo "active";}else{}?> -->
+						<?php if($p->status > 0){?>
 						<div class="body-progres">
 							<ul class="progress-order">
 								<li class="<?php if($p->status == 4){echo "active";}else{}?>"><span class="tx-12">Pembayaran Berhasil</span></li>
@@ -53,6 +55,7 @@
 
 							</ul>
 						</div>
+						<?php }else{}?>
 			 		 	<div class="user-sb-main-body">
 							  <?php
 									 $barang=$this->db->query("select * from dah_products,orders where dah_products.prod_id=orders.order_produk and orders.order_invoice='$p->id'")->result(); 

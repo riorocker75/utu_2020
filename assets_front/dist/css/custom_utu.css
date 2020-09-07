@@ -1454,9 +1454,9 @@ a.prod-price {
 .progress-order li:before {
   content: counter(step);
   counter-increment: step;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   border: 1px solid #ddd;
   border-radius: 100%;
   display: block;
@@ -1481,15 +1481,19 @@ a.prod-price {
 }
 
 .progress-order li.active {
-  color: #e53935;
+  color: #019376;
 }
 
 .progress-order li.active:before {
-  border-color: #e53935;
+  font-family: FontAwesome;
+  content: "\f00c";
+  border-color: #019376;
+  background: #019376;
+  color: #fff;
 }
 
 .progress-order li.active + li:after {
-  background-color: #e53935;
+  background-color: #019376;
 }
 
 .laman-bayar {

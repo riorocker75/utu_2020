@@ -1318,9 +1318,9 @@ transition: .15s ease-in-out;
 .progress-order li:before {
   content: counter(step);
   counter-increment: step;
-  width: 50px;
-  height: 50px;
-  line-height : 50px;
+  width: 40px;
+  height: 40px;
+  line-height : 40px;
   border: 1px solid #ddd;
   border-radius: 100%;
   display: block;
@@ -1343,13 +1343,18 @@ transition: .15s ease-in-out;
   content: none;
 }
 .progress-order li.active {
-  color: $danger-co;
+  color:  $core-co;
 }
+
 .progress-order li.active:before {
-  border-color: $danger-co;
+  font-family: FontAwesome;
+  content: "\f00c";
+  border-color:  $core-co;
+  background: $core-co;
+  color: #fff;
 } 
 .progress-order li.active + li:after {
-  background-color: $danger-co;
+  background-color: $core-co;
   // z-index: 1;
 }
 // end pesanan side
