@@ -698,10 +698,8 @@ body {
 }
 
 .notif-body {
-  padding: 0 8px;
   display: block;
-  border: 1px solid #c1c2c3;
-  border-bottom: none;
+  margin: 8px 0;
   max-width: 100%;
 }
 
@@ -1409,4 +1407,9 @@ body {
 .nolog-inv-body {
   padding: 0 10px;
   margin-top: 15px;
+}
+
+.labil-notif {
+  background: #ffebee;
+  color: #ef5350;
 }

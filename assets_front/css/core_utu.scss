@@ -622,12 +622,9 @@ body {
 
 // notif start
 .notif-body{
-	
-	padding:0 8px;
 	display:block;
 	p{margin-bottom:-2px}
-	border:1px solid #c1c2c3;
-	border-bottom:none;
+	margin: 8px 0;
 	max-width:100%;
 }
 
@@ -1246,5 +1243,8 @@ overflow-y: hidden;
 // end nolog invoice
 
 
-
+.labil-notif{
+	background: #ffebee;
+	color: #ef5350;
+}
 

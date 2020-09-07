@@ -7,13 +7,13 @@
 			<!-- Advanced login -->
 			<form action="<?php echo base_url().'index/user_daftar'; ?>" method="post">
 				<div class="row">
-					<div class="col-lg-4 offset-lg-4 col-sm-8 offset-sm-2 col-10 offset-1">
+		<div class="col-lg-4 offset-lg-5 col-sm-8 offset-sm-2 col-10 offset-1">
 							<div class="main-login-form">
 
-<div class="mlg-title">
-	<h2>Daftar Sekarang</h2>
+			<div class="mlg-title">
+				<h2>Daftar Sekarang</h2>
 
-</div>
+			</div>
 		<div class="form-group">
 		<label for="exampleInputEmail1" style="opacity:0.6">Alamat Email</label>
 		<input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" >

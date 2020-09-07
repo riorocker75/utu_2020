@@ -250,17 +250,18 @@
 <div class="modal fade modal-login" id="login-pembeli" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Masuk Akun</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <div class="modal-header modal-custom">
+		<h5 class="modal-title core-co tx-bold-600" >Masuk Akun</h5>
+		<p style="margin-top:15px">Masuk dengan email & password kamu</p>
+        <!-- <button type="button" class="close float-right" data-dismiss="modal">
           <span aria-hidden="true">&times;</span>
-        </button>
+        </button> -->
       </div>
       <form action="<?php echo base_url().'index/user_login' ?>" method="post">
-        <div class="modal-body">  
+        <div class="modal-body modal-body-custom">  
         <div class="form-group">
              
-              <input type="email" class="form-control tx-14" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+              <input type="email" class="form-control tx-14" name="email"  aria-describedby="emailHelp" placeholder="Email">
               <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
           </div>
         <div class="form-group">
@@ -283,10 +284,10 @@
                <button type="submit" class="btn-login-fullwidth bor-login"> Masuk <i class="fas fa-sign-in-alt"></i></button>
 
 			 </div>
-				 <div class="d-flex justify-content-center">
+				 <!-- <div class="d-flex justify-content-center">
 
-				 <a data-toggle="modal" data-target="#login-penjual" id="log-jual" class="tx-12 labil labil-success white-text" style="text-transform:none;cursor:pointer">Masuk Ke Toko</a>
-				</div>
+				 	<a data-toggle="modal" data-target="#login-penjual" id="log-jual" class="tx-12 labil labil-success white-text" style="text-transform:none;cursor:pointer">Masuk Ke Toko</a>
+				</div> -->
 
         
           </div>

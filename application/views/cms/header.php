@@ -48,7 +48,6 @@
     <div class="bag-header">
       <div class="col-lg-3">
           <div class="float-left">
-           
               <h3>Coming Soon</h3>
         </div>
       </div>
@@ -69,12 +68,69 @@
       <div class="col-lg-5">
           <div class="float-right">
             <ul class="search-right">
+            <?php if($this->session->userdata('user_status') != "login"){?>
               <li><a href="" style="font-weight:600">Pesanan</a></li>
+            <?php }else{}?> 
               <li><a href="<?php echo base_url()?>/index/tentang" style="font-weight:600">Tentang</a></li>
 
               <!-- disini buat logika jika dia masuk ke akun -->
-              <li><a class="btn btn-core white-text" href="">Masuk</a></li>
+              <?php if($this->session->userdata('user_status') != "login"){?>
+                <li><a data-toggle="modal" data-target="#login-pembeli">Masuk</a></li>
+                <li><a class="btn btn-core white-text" href="">Daftar</a></li>
 
+              <?php }else{?> 
+
+                 <!-- notifikasi -->
+                 <li class="dropdown">
+                   <a data-toggle="dropdown">
+                       <i class="fa fa-bell tx-18" aria-hidden="true"></i>
+                   </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-custom">
+                      <div class="dropdown-title">
+                        Notifikasi Pesanan
+                      </div>
+                      <?php 
+                       $id=$this->session->userdata('user_id');
+                       $notif_inv=$this->m_dah->get_susun_invoice($id,0)->num_rows();
+                       $notif_invoices=$this->m_dah->get_susun_invoice($id,0)->result();
+                        if($notif_inv > 0){ 
+                      ?>
+                        <?php foreach($notif_invoices as $inc){ ?>
+                            <a href="<?php echo base_url().'user/invoice_detail/'.$inc->id ?>" > 
+                              <div class="notif-body">
+                              <a href="<?php echo base_url().'user/invoice_detail/'.$inc->id ?>" class="blue-text text-accsent-3 tx-14 tx-bold-600"> <?php echo $inc->no?></a>
+                              <p class=" tx-12">Rp <?php echo number_format($inc->pembayaran)?></p>
+                               <label class="labil labil-notif tx-10">Harap dibayar</label>
+                              </div>
+                              </a>
+                          <?php }?>
+                      <?php }else{?>
+                        <div class="center-img" style="margin-top:20px">
+                             <img src="<?php echo base_url()?>/dah_image/default/bag-kosong.png">
+                        </div>
+                          Oops Belum ada belanja
+                      <?php } ?>  
+                    </div>
+                </li>
+                <!-- end notifikasi -->
+
+                <li class="dropdown">
+                   <a data-toggle="dropdown">
+                       <i class="fa fa-user tx-18" aria-hidden="true"></i>
+                   </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-custom">
+                      <ul>
+                          <li><a href="<?php echo base_url().'user/invoice' ?>">Pesanan</a> </li>
+                          <li><a href="<?php echo base_url().'user'?>">Profil</a></li>
+                          <li><a href="" data-toggle="modal" data-target="#modal-resi">Lacak Pesanan</a></li>
+                          <li><a href="<?php echo base_url().'user/bantuan'; ?>">Bantuan</a></li>
+                          <li><a href="<?php echo base_url().'user/user_logout'?>">Keluar</a></li>
+                      </ul>
+                    </div>
+                </li>
+
+               
+              <?php } ?>
               <!-- end logika login -->
 
           </ul>
@@ -93,12 +149,67 @@
   <div class="container-custom">
      <div class="float-left">
        <div class="bag-header">
-         <h3>Coming Soon</h3>
+         <!-- <h3>Coming Soon</h3> -->
        </div>
      </div>
 
      <div class="float-right">
-       semua ada disni
+      <ul class="search-right" style="margin-top:12px">
+           <!-- disini buat logika jika dia masuk ke akun -->
+           <?php if($this->session->userdata('user_status') != "login"){?>
+            <li><a href="<?php echo base_url().'index/user_daftar'?>" title="daftar">Daftar</a></li>
+            <li><a data-toggle="modal" data-target="#login-pembeli" title="masuk"><i class="fas fa-sign-in-alt"></i></a></li>
+
+              <?php }else{?> 
+
+                 <!-- notifikasi -->
+                 <li class="dropdown">
+                   <a data-toggle="dropdown">
+                       <i class="fa fa-bell tx-18" aria-hidden="true"></i>
+                   </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-custom">
+                      <div class="dropdown-title">
+                        Notifikasi Pesanan
+                      </div>
+                      <?php if($notif_inv > 0){ ?>
+                        <?php foreach($notif_invoices as $inc){ ?>
+                            <a href="<?php echo base_url().'user/invoice_detail/'.$inc->id ?>" > 
+                              <div class="notif-body">
+                              <a href="<?php echo base_url().'user/invoice_detail/'.$inc->id ?>" class="blue-text text-accsent-3 tx-14 tx-bold-600"> <?php echo $inc->no?></a>
+                              <p class=" tx-12">Rp <?php echo number_format($inc->pembayaran)?></p>
+                               <label class="labil labil-notif tx-10">Harap dibayar</label>
+                              </div>
+                              </a>
+                          <?php }?>
+                      <?php }else{?>
+                        <div class="center-img" style="margin-top:20px">
+                             <img src="<?php echo base_url()?>/dah_image/default/bag-kosong.png">
+                        </div>
+                          Oops Belum ada belanja
+                      <?php } ?>  
+                    </div>
+                </li>
+                <!-- end notifikasi -->
+
+                <li class="dropdown">
+                   <a data-toggle="dropdown">
+                       <i class="fa fa-user tx-18" aria-hidden="true"></i>
+                   </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-custom">
+                      <ul>
+                          <li><a href="<?php echo base_url().'user/invoice' ?>">Pesanan</a> </li>
+                          <li><a href="<?php echo base_url().'user'?>">Profil</a></li>
+                          <li><a href="" data-toggle="modal" data-target="#modal-resi">Lacak Pesanan</a></li>
+                          <li><a href="<?php echo base_url().'user/bantuan'; ?>">Bantuan</a></li>
+                          <li><a href="<?php echo base_url().'user/user_logout'?>">Keluar</a></li>
+                      </ul>
+                    </div>
+                </li>
+
+               
+              <?php } ?>
+              <!-- end logika login -->
+      <ul>
      </div>
   </div>
 </div>
