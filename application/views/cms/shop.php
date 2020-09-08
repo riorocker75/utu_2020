@@ -1,6 +1,6 @@
 <!-- breadrumb section -->
 <section class="breadcrumbs">
-    <div class="container">
+    <div class="container-custom">
         <div class="breadcrumbs-line">
             <ul>
                 <li><a href="<?php echo base_url()?>">Home</a> </li>
@@ -19,7 +19,7 @@
 	
 	?>
 <section class="product-gird">
-    <div class="container">
+    <div class="container-custom">
         <div class="row" >
             <!-- sidebar product-gird -->
             <?php include "sidebar_shop.php"?>
@@ -50,38 +50,22 @@
 								?>
 								</a>
                             </div>
-
-                            <div class="product-mg-sell">
-								<div class="product-mg-price">
-									<p>Rp.<?php echo number_format($p->prod_price)?></p>
-								</div>
-
-								<div class="product-mg-rating">
+                            <div class="product-mg-rating">
 									<p>
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
-										<span style="color:#000;opacity:0.5">(10) ulasan</span>
 									</p>
 									
 								</div>
-
-								<div class="product-mg-author">
-									<p>
-										<i class="fas fa-store-alt"></i> 
-										<?php
-										  $nama_author=$this->m_dah->product_author_detail($p->prod_author)->row();
-										  echo $nama_author->user_name; 
-										?>	
-									</p>
+                            <div class="product-mg-sell">
+								<div class="product-mg-price">
+									<p>Rp. <?php echo number_format($p->prod_price)?></p>
 								</div>
 							</div>
 							
-							<div class="product-mg-stats center">
-										<i class="fas fa-award"></i>Terbaik
-								</div>
                         </div>
 
                     </div>

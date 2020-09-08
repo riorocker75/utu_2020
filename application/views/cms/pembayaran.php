@@ -1,6 +1,6 @@
 <!-- breadrumb section -->
 <section class="breadcrumbs">
-    <div class="container">
+    <div class="container-custom">
         <div class="breadcrumbs-line">
             <ul>
                 <li><a href="<?php echo base_url()?>">Home</a> </li>
@@ -14,7 +14,7 @@
 <!-- end breadcrumb -->
 
 <section class="checkout-product">
-    <div class="container">
+    <div class="container-custom">
      
            
         <!-- detail bayar  -->
@@ -255,17 +255,17 @@
                         <div class="col-lg-4 offset-lg-3 col-md-6 col-sm-12 col-12" >
                              <div class="laman-bayar">
                                 <div class="laman-bayar-title">
-                                    <h2>Ringkasan pembayaran</h2>
+                                    Authentifikasi pembeli
                                     </div> 
                                   <div class="col-12">
-                                    <a href="<?php echo base_url().'index/pembayaran_nolog'?>" class="list-bta blue-text text-accent-4">Bayar Tanpa Login
+                                    <a href="<?php echo base_url().'index/pembayaran_nolog'?>" class="list-bta ">Bayar tanpa punya akun
                                     <i class="fas fa-arrow-alt-circle-right  tx-20"></i>
                                     </a>
                                   </div>  
 
                                   <div class="col-12">
-                                    <a data-toggle="modal" data-target="#pembayaran_log_aja" class="list-bta green-text text-accent-4" style="cursor:pointer">Login untuk melanjutkan
-                                        <i class="fas fa-arrow-alt-circle-down tx-20"></i>
+                                    <a data-toggle="modal" data-target="#pembayaran_log_aja" class="list-bta" style="cursor:pointer">Masuk untuk melanjutkan
+                                       <i class="fas fa-sign-in-alt tx-20"></i>
                                     </a>
                                   </div>  
                              </div>

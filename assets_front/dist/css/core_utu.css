@@ -990,7 +990,7 @@ body {
 
 .slider-prepro {
   background: #fff;
-  height: 270px;
+  height: 375px;
   padding: 20px;
   width: 100%;
   border-radius: 8px;
@@ -1024,7 +1024,7 @@ body {
 }
 
 .loader-prepro {
-  height: 280px;
+  height: 375px;
   overflow: hidden;
   word-wrap: break-word;
   width: 100%;
@@ -1045,16 +1045,14 @@ body {
 
 .lprepro-ind {
   background: #fff;
-  height: 280px;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  height: 375px;
+  border-radius: 8px;
   padding: 7px;
 }
 
 .lprepro-img {
   background: #f2f2f2;
-  height: 160px;
+  height: 238px;
   width: 100%;
   margin-bottom: 8px;
   border-radius: 8px;

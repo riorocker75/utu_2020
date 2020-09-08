@@ -1,6 +1,6 @@
 <!-- breadrumb section -->
 <section class="breadcrumbs">
-    <div class="container">
+    <div class="container-custom">
         <div class="breadcrumbs-line">
             <ul>
                 <li><a href="<?php echo base_url()?>">Home</a> </li>
@@ -24,7 +24,7 @@
 <!-- product-single -->
 
 <section class="product-single" ng-app="">
-    <div class="container">
+    <div class="container-custom">
    
             <div class="product-single-container ">
                 <!-- detail produxt -->
@@ -313,7 +313,7 @@
                     $q = $this->m_dah->edit_data($ww,'dah_products')->result();
                     
                 ?>                 
-                <?php 	foreach($q as $pop){?>
+                <?php foreach($q as $pop){?>
                   <div class="prod-index" >
              
              <!-- image -->
@@ -338,28 +338,22 @@
                      ?> 
                    </a>         
                </div>
-         
+               <div class="product-mg-rating">
+                    <p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                    
+                </div>
              <!-- end judul -->
             <a href="<?php echo base_url().'produk/'.$pop->prod_id.'-'.create_slug($pop->prod_name) ?>">
                <!-- harga & add to cart -->
                <div class="prod-price">
                  Rp. <?php echo number_format($pop->prod_price) ?>
-                 <p class="tx-12" style="margin-top:7px;">
-                   <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <span style="color:#000;opacity:0.4">(50) ulasan</span>
-                 </p>
-
-                 <p class="tx-13" style="margin-top:5px;color:#000;opacity:0.5"> <i class="fas fa-store-alt"></i> 
-                 <?php 
-                     $nama_author=$this->m_dah->product_author_detail($pop->prod_author)->row();
-                     echo $nama_author->user_name;      
-                   ?> 
-
-               </p>
+               
                </div>
                <!-- end harga -->
            </a>

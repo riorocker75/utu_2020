@@ -1,5 +1,5 @@
 <section class="breadcrumbs">
-    <div class="container">
+    <div class="container-custom">
         <div class="breadcrumbs-line">
             <ul>
                 <li><a href="<?php echo base_url()?>">Home</a> </li>
@@ -12,7 +12,7 @@
 
 
 <section class="checkout-product">
-    <div class="container">
+    <div class="container-custom">
     <form action="<?php echo base_url().'index/order_nolog' ?>" method="post">
                     <div class="row">
 

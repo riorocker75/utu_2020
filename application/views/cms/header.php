@@ -76,7 +76,7 @@
               <!-- disini buat logika jika dia masuk ke akun -->
               <?php if($this->session->userdata('user_status') != "login"){?>
                 <li><a data-toggle="modal" data-target="#login-pembeli">Masuk</a></li>
-                <li><a class="btn btn-core white-text" href="">Daftar</a></li>
+                <li><a class="btn btn-core white-text" href="<?php echo base_url().'index/user_daftar'?>">Daftar</a></li>
 
               <?php }else{?> 
                 <?php

@@ -858,7 +858,7 @@ overflow-y: hidden;
 // loader-slider
 .slider-prepro{
 	background: #fff;
-	height: 270px;
+	height: 375px;
 	padding:20px;
 	width: 100%;
 	border-radius: 8px;
@@ -878,8 +878,6 @@ overflow-y: hidden;
 	}
 }
 .slider-prepro .imgpre-pro{
-	
-
 	animation-name: Loaprepro;
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
@@ -888,7 +886,7 @@ overflow-y: hidden;
 
 // loader pre produk
 .loader-prepro{
-	height: 280px;
+	height: 375px;
 	overflow: hidden;
 	word-wrap: break-word;
 	width: 100%;
@@ -907,15 +905,14 @@ overflow-y: hidden;
 }
 .lprepro-ind{
 	background:#fff;
-	height: 280px;
-	box-shadow: $box-shadow-2dp;
-	border-radius: 4px;
+	height: 375px;
+	border-radius: 8px;
 	padding: 7px;
 }
 
 .lprepro-img{
 	background: #f2f2f2;
-	height: 160px;
+	height: 238px;
 	width: 100%;
 	margin-bottom: 8px;
 	border-radius: 8px;

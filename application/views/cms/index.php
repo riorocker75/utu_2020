@@ -132,28 +132,24 @@
                      ?> 
                    </a>         
                </div>
-         
+               
+               <div class="product-mg-rating">
+									<p>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</p>
+									
+								</div>
              <!-- end judul -->
             <a href="<?php echo base_url().'produk/'.$p->prod_id.'-'.create_slug($p->prod_name) ?>">
                <!-- harga & add to cart -->
                <div class="prod-price">
+              
                  Rp. <?php echo number_format($p->prod_price) ?>
-                 <p class="tx-12" style="margin-top:7px;">
-                   <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <i class="fa fa-star yellow-text text-darken-3"></i>
-                   <!-- <span style="color:#000;opacity:0.4">ulasan</span> -->
-                 </p>
-
-                 <p class="tx-13" style="margin-top:5px;color:#000;opacity:0.5"> <i class="fas fa-store-alt"></i> 
-                 <?php 
-                     $nama_author=$this->m_dah->product_author_detail($p->prod_author)->row();
-                     echo $nama_author->user_name;      
-                   ?> 
-
-               </p>
+              
                </div>
                <!-- end harga -->
            </a>

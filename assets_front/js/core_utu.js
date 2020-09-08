@@ -5,7 +5,7 @@ $(document).ready(function() {
 	setTimeout(function() {
 		$("#prod-ind-jq").css({"visibility": "visible", "height":"auto"});
 	},4800);
-	$(".loader-prepro").fadeOut(5200);
+	$(".loader-prepro").fadeOut(4800);
 
 	setTimeout(function() {
 		$("#prod-ind-jb").css({"visibility": "visible", "height":"auto"});
