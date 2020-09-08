@@ -618,16 +618,19 @@ a.prod-price {
 
 .product-single-container {
   padding: 10px;
+  border-radius: 8px;
 }
 
 .single-img {
-  min-width: 100%;
-  padding: 7px;
+  width: auto;
+  height: auto;
+  padding: 5px;
 }
 
 .single-img img {
   max-width: 100%;
-  height: 330px;
+  height: auto;
+  border-radius: 8px;
 }
 
 @media (min-width: 300px) and (max-width: 720px) {
@@ -639,7 +642,6 @@ a.prod-price {
 
 .product-single-detail {
   padding: 20px 40px;
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -669,28 +671,35 @@ a.prod-price {
 }
 
 .product-single-title {
-  border-bottom: 1px solid #c1c2c3;
+  padding: 20px 0;
+  color: #253237;
 }
 
 .product-single-title h1 {
-  font-size: 26px !important;
+  font-size: 1.5em !important;
   font-weight: 600;
+  color: #253237;
 }
 
 .product-single-price {
-  margin-top: 20px;
+  border-radius: 8px;
 }
 
 .product-single-price h2 {
-  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 30px;
+  color: #9b9b9b;
 }
 
 .product-single-price span {
   font-size: 14px;
-  opacity: 0.7;
-  font-weight: 600;
+  font-weight: 400;
+}
+
+.cs-row-aja {
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 16px 0px;
+          box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 16px 0px;
 }
 
 .cs-row-aja .row {
@@ -705,10 +714,12 @@ a.prod-price {
 }
 
 .single-seller {
-  background: #f0edf0;
-  padding: 5px 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 16px 0px;
+          box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 16px 0px;
+  padding: 8px;
   margin-top: 10px;
-  border-radius: 2px;
+  border-radius: 8px;
+  font-size: 15px;
 }
 
 .single-seller li {
@@ -804,7 +815,9 @@ a.prod-price {
   overflow-x: auto !important;
   overflow-y: hidden;
   width: 100%;
-  font-family: "Open Sans", sans-serif;
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 16px 0px;
+          box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 16px 0px;
 }
 
 .nav-tab-custom a {
@@ -818,12 +831,12 @@ a.prod-price {
 }
 
 .nav-tab-custom .nav-link:hover {
-  border-bottom: 3px solid #00c853;
+  border-bottom: 5px solid #019376;
 }
 
 .nav-tab-custom .active {
   background: #fff !important;
-  border-bottom: 3px solid #4caf50 !important;
+  border-bottom: 5px solid #019376 !important;
 }
 
 .tab-custom {
@@ -831,9 +844,15 @@ a.prod-price {
   letter-spacing: 1;
   line-height: 1.5;
   padding: 10px;
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 16px 0px;
+          box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 16px 0px;
 }
 
 .product-suggest {
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 16px 0px;
+          box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 16px 0px;
   margin-top: 40px;
   background: #fff;
   padding: 0 10px 0 10px;

@@ -32,7 +32,7 @@
                     <div class="cs-row-aja">
                         <div class="row">
                             <!-- img sinlge produxt -->
-                            <div class="col-lg-5 col-md-12 col-sm-12 col-12" style="background: #fff;">
+                            <div class="col-lg-5 col-md-12 col-sm-12 col-12" style="background: #fff;border-radius: 8px;">
                                     <div class="single-img">
                                         <?php
                                             if($p->prod_img1 != ""){
@@ -46,33 +46,32 @@
                             </div>
                             <!-- end img single product -->
                             <!-- detail product -->
-                            <div class="col-lg-7 col-md-12 col-sm-12" style="background: #fff;padding-top:6px;">
+                            <div class="col-lg-7 col-md-12 col-sm-12" style="background: #fff;border-radius: 8px;padding:0 15px">
                         
                                 <div class="product-single-title">
 
                                     <h1><?php echo ucfirst($p->prod_name); ?> </h1>
-                                <i class="fa fa-star yellow-text text-darken-3 tx-13" aria-hidden="true"></i>
-                                <i class="fa fa-star yellow-text text-darken-3 tx-13" aria-hidden="true"></i>     
-                                <i class="fa fa-star yellow-text text-darken-3 tx-13" aria-hidden="true"></i>     
-                                <i class="fa fa-star yellow-text text-darken-3 tx-13" aria-hidden="true"></i>     
-                                <i class="fa fa-star yellow-text text-darken-3 tx-13" aria-hidden="true"></i>     
-                                    
+                                    <i class="fa fa-star yellow-text text-darken-3 tx-13"></i>
+                                    <i class="fa fa-star yellow-text text-darken-3 tx-13"></i>     
+                                    <i class="fa fa-star yellow-text text-darken-3 tx-13"></i>     
+                                    <i class="fa fa-star yellow-text text-darken-3 tx-13"></i>     
+                                    <i class="fa fa-star yellow-text text-darken-3 tx-13"></i>     
+                                        
                                 </div>
 
                                 <div class="product-single-price">
-                                    <h2 class="blue-text text-darken-3"><?php echo "Rp.".number_format($p->prod_price).",-"; ?></h2>
-                                    <span>Stok: <b><?php echo $p->prod_qty ?> </b></span>
-                                    <p> <span>Berat : <b> <?php echo $p->prod_berat ?> </b>gram</span></p>
+                                    <h2><?php echo "Rp.".number_format($p->prod_price).",-"; ?></h2>
+                                    <span>Stok: <?php echo $p->prod_qty ?> </span>
+                                    <p> <span>Berat :  <?php echo $p->prod_berat ?> gram</span></p>
                                     <p ng-init="harga='<?php echo $p->prod_price?>'" ></p>
 
                                     <p class="tx-12" style="opacity:0.7;margin-top:-10px">Masukan jumlah yang ingin di beli</p>         
                                     <div class="col-lg-4 col-md-4 col-sm-12" style="margin-top:-10px;margin-left:-15px;">
-                                    <input class="input-spinner" type="number" min="1" name="jumlah_produk" value="1" max="90" ng-model="stock" />
-                                    <input type="hidden" name="rowid[]" value="<?php echo $item['rowid'] ?>">
+                                        <input class="input-spinner" type="number" min="1" name="jumlah_produk" value="1" max="90" ng-model="stock" />
+                                        <input type="hidden" name="rowid[]" value="<?php echo $item['rowid'] ?>">
                                     </div>
-                                <input type="hidden" id="jumlah_produk" value="{{ (stock  * 1) || (1)}}">
-                                <input type="hidden" id="stock_hasil" value="{{ (harga * stock) || (harga * 1) }}">
-
+                                    <input type="hidden" id="jumlah_produk" value="{{ (stock  * 1) || (1)}}">
+                                    <input type="hidden" id="stock_hasil" value="{{ (harga * stock) || (harga * 1) }}">
                                     <input type="hidden" name="stock_hasil" value="{{ (harga * stock) || (harga * 1) }}"> 
 
                                 </div>
@@ -93,15 +92,15 @@
                                                 </li>
                                                 <li>
                                                     Rating  &nbsp;: 
-                                                    <i class="fa fa-star yellow-text text-darken-3 tx-13" aria-hidden="true"></i>
-                                                    <i class="fa fa-star yellow-text text-darken-3 tx-13" aria-hidden="true"></i>
-                                                    <i class="fa fa-star yellow-text text-darken-3 tx-13" aria-hidden="true"></i>
-                                                    <i class="fa fa-star yellow-text text-darken-3 tx-13" aria-hidden="true"></i>
-                                                    <i class="fa fa-star yellow-text text-darken-3 tx-13" aria-hidden="true"></i>
+                                                    <i class="fa fa-star yellow-text text-darken-3 tx-13"></i>
+                                                    <i class="fa fa-star yellow-text text-darken-3 tx-13"></i>
+                                                    <i class="fa fa-star yellow-text text-darken-3 tx-13"></i>
+                                                    <i class="fa fa-star yellow-text text-darken-3 tx-13"></i>
+                                                    <i class="fa fa-star yellow-text text-darken-3 tx-13"></i>
                                                 </li>
 
                                                 <li>
-                                                    Proses Kirim : <b class="green-text text-darken-1"><?php echo $p->prod_kirim ?></b> 
+                                                    Proses Kirim : <?php echo $p->prod_kirim ?>
                                                 </li>
                                             </ul>
 
@@ -109,14 +108,14 @@
                                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                             <ul>
                                                 <li>
-                                                Pengirim : <a href=""><?php echo $p->prod_jasa_kirim ?></a>
+                                                Kurir &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <a href=""><?php echo $p->prod_jasa_kirim ?></a>
                                                 </li>
                                                 <li>
                                                 Lokasi &nbsp;&nbsp;&nbsp;&nbsp;: <?php echo $p->prod_lokasi ?>
                                                 </li>
 
                                                 <li>
-                                                Terjual &nbsp;&nbsp;&nbsp;&nbsp;: <b class="red-text text-darken-1">400 product</b> 
+                                                Terjual &nbsp;&nbsp;&nbsp;&nbsp;: <span class="red-text text-darken-1">400 product</span> 
                                                 </li>
 
                                             </ul>
@@ -283,7 +282,7 @@
   <!-- product suggest -->
         <div class="product-suggest">
             <div class="product-s-title"  style="background: #fff;">
-                <h1>Banyak dicari</h1>
+                <h1>Paling diminati</h1>
             </div>
            
    <div class="load-bef-ind d-lg-block d-xl-block d-md-block d-sm-block d-none">
