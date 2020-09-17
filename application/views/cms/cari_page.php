@@ -52,37 +52,25 @@
 								</a>
                             </div>
 
+                            <div class="product-mg-rating">
+                                <p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </p>
+                                
+                            </div>
+                                
                             <div class="product-mg-sell">
 								<div class="product-mg-price">
 									<p>Rp.<?php echo number_format($p->prod_price)?></p>
 								</div>
 
-								<div class="product-mg-rating">
-									<p>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<span style="color:#000;opacity:0.5">(10) ulasan</span>
-									</p>
-									
-								</div>
-
-								<div class="product-mg-author">
-									<p>
-										<i class="fas fa-store-alt"></i> 
-										<?php
-										  $nama_author=$this->m_dah->product_author_detail($p->prod_author)->row();
-										  echo $nama_author->user_name; 
-										?>	
-									</p>
-								</div>
 							</div>
 							
-							<div class="product-mg-stats center">
-										<i class="fas fa-award"></i>    Terbaik
-								</div>
+						
                         </div>
 
                     </div>

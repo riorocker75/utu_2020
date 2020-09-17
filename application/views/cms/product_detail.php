@@ -60,7 +60,7 @@
                                 </div>
 
                                 <div class="product-single-price">
-                                    <h2><?php echo "Rp.".number_format($p->prod_price).",-"; ?></h2>
+                                    <h2><?php echo "Rp.".number_format($p->prod_price); ?></h2>
                                     <span>Stok: <?php echo $p->prod_qty ?> </span>
                                     <p> <span>Berat :  <?php echo $p->prod_berat ?> gram</span></p>
                                     <p ng-init="harga='<?php echo $p->prod_price?>'" ></p>
@@ -384,7 +384,7 @@
         <div class="col-lg-8 col-md-6 col-sm-4 col-12 ">
             <div class="harga-sticky-beli float-lg-right float-sm-left d-none  d-sm-block d-md-block">
                 <p>Total:</p>  
-               <span>Rp&nbsp;{{ (harga * stock) || (harga * 1) | number}},-</span>
+               <span>Rp&nbsp;{{ (harga * stock) || (harga * 1) | number}}</span>
              </div>
 
              <div class="harga-sticky-beli float-lg-left d-sm-none d-none d-md-block">
@@ -414,7 +414,7 @@
              </div>     -->
              
              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-             <a id="<?php echo $p->prod_id; ?>" class="btn-bordered-md-fullwidth bor-success-full tx-16 btn-bayarlangsung" style="cursor:pointer">Beli Sekarang</a>
+             <a id="<?php echo $p->prod_id; ?>" class="btn-bordered-md-fullwidth bor-core-full tx-16 btn-bayarlangsung" style="cursor:pointer">Beli Sekarang</a>
 
              </div>
                                           

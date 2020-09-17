@@ -40,7 +40,7 @@
            
            <div class="sec-main-isi">
                <p class="tx-15">
-                   SerbaUMBI merupakan website toko online yang menawarkan produk khusus umbi umbian. Alasan produk umbi-umbian dipilih karena ketahanan produk yang lama jika dibandingkan dengan sayuran lainnya. Produk umbi umbian yang diperjual belikan pun hasil dari pertanian peduduk setempat, jadi hal ini bisa membantu petani untuk mempromosikan hasil panennya ke seluruh daerah.
+                Lorem
                 </p>   
            </div>
            
@@ -74,7 +74,7 @@
                     <i class="fa fa-envelope" ></i>&nbsp;E-mail 
                   </p>
                   <p style="margin-top:-10px;">
-                    Serbaumbi@gmail.com
+                    lorem@gmail.com
                   </p>
                </div> 
                
@@ -84,7 +84,7 @@
                     <i class="fa fa-globe"></i>&nbsp;Link Resmi
                   </p>
                   <p style="margin-top:-10px;">
-                    <a href="http://serbaumbi.esy.es">serbaumbi.esy.es</a>
+                    <a href="http://lorem.esy.es">lorem.esy.es</a>
                   </p>
                </div> 
         
