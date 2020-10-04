@@ -218,64 +218,60 @@
 
         </div>
   </div>
+   
+  
+  <!-- ini untuk mobil produk -->
+  <div class="mobile-aja d-lg-none d-md-none d-sm-none d-inline-block">
 
-  <?php foreach($products as $pr1){?>
-    <?php $nama_author_1=$this->m_dah->product_author_detail($pr1->prod_author)->row(); ?>
-
-    <div class="prod-list-sw d-lg-none d-md-none d-sm-none d-inline-block">
-                    <div class="prod-list-sw-pre">
-                    
-                    <a href="" data-toggle="tooltip" data-placement="bottom" title="add to favorit"><i class="fa fa-heart"></i></a>
-                    </div>                 
-                    <div class="prod-list-sw-coverup">
-                        <div class="prod-list-sw-img">
-                          <?php if($pr1->prod_img1!=""){
-                       echo"<img alt='Product' src='".base_url().'dah_image/products/'.$pr1->prod_img1."'>";
-                       }else{
-                         echo"<img alt='Product' src='".base_url()."dah_image/default/no_product.jpg'>";
-                       }
-                       ?>
-                        </div>  
-                        
-                        <div class="prod-list-sw-title">
-                     <a href="<?php echo base_url().'produk/'.$pr1->prod_id.'-'.create_slug($pr1->prod_name) ?>">
-                         <?php 
-                         echo substr(strip_tags($pr1->prod_name),0,70);
-                         ?> 
-                     </a> 
-                                    
+      <div class="row">
+        
+        <?php foreach($products as $pr1){?>
+          <?php $nama_author_1=$this->m_dah->product_author_detail($pr1->prod_author)->row(); ?>
+            <div class="col-6 col-sm-6">
+          <div class="prod-list-sw ">
+                                      
+                          <div class="prod-list-sw-coverup">
+                              <div class="prod-list-sw-img">
+                                <?php if($pr1->prod_img1!=""){
+                            echo"<img alt='Product' src='".base_url().'dah_image/products/'.$pr1->prod_img1."'>";
+                            }else{
+                              echo"<img alt='Product' src='".base_url()."dah_image/default/no_product.jpg'>";
+                            }
+                            ?>
+                              </div>  
+                              
                         </div>
-                </div>
 
-                <div class="prod-list-sw-rating">
-                    <i class="fa fa-star yellow-text text-accent-4 tx-16"></i> 5.0 <span class="tx-bold-400">(90)</span>
-                </div> 
-                
-                <div class="prod-list-sw-price">
-                    <?php if($pr1->prod_price != "0"){?>
-                <span class="blue-text text-accent-3 tx-robosan tx-14">Rp&nbsp;<?php echo number_format($pr1->prod_price);?></span>
-                    <?php }else{?>
-                    <span class="green-text text-accent-4 tx-robosan tx-14">Gratis</span>
-                    <?php } ?>  
-                </div>
-            
-                <div class="prod-list-sw-auth">
-                    <div class="prod-list-swa-img">
-                        <img src="<?php echo base_url()?>dah_image/system/shop-store.png">
-                    </div> 
-                     <?php 
-                            $cat = $this->m_dah->get_product_category($pr1->prod_id)->result();
-                            foreach($cat as $ct){}
-                       ?>
-                    <div class="prod-list-swa-title">
-                            <a href="" class="tx-14"><?php echo substr(strip_tags($nama_author_1->user_name),0,20); ?></a>
-                        <div class="text-prod-list-swa-cat">di<a href="<?php echo base_url().'index/kategori_produk/'.$ct->pcat_id;?>" style="top:1px;margin-left:2px;"><?php echo substr(strip_tags($ct->pcat_name),0,20); ?></a> </div>    
-                    </div>
-                    
-                </div>             
-        </div>
-  <?php } ?>  
-<!-- end baru panen -->
+                        <div class="prod-list-sw-title">
+                            <a href="<?php echo base_url().'produk/'.$pr1->prod_id.'-'.create_slug($pr1->prod_name) ?>">
+                            <?php 
+                            echo substr(strip_tags($pr1->prod_name),0,50);
+                            ?> 
+                        </div>
+
+                        <div class="prod-list-sw-price">
+                            <span class=" tx-robosan tx-14">Rp&nbsp;<?php echo number_format($pr1->prod_price);?></span>
+                            
+                        </div>
+
+                        <div class="prod-list-sw-cart" >
+                            <a id="<?php echo $pr1->prod_id; ?>" class="keranjang-dulu-ind" title="tambah ke keranjang">
+                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                          </a>
+                        </div>
+
+                        
+              </div>
+
+            </div>
+        <?php } ?>
+
+    </div>
+  </div>
+
+
+  <!-- end mobile produk -->
+
 
 <!--end product-->
 

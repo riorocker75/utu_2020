@@ -346,7 +346,67 @@ class Index extends CI_Controller {
 				'status'=>1
 				);
 			$this->m_dah->insert_data($data,'user');
+		// email config
+		$this->load->library('email');
+		$subyek="Pendaftaran Member";
+		$pesan="
+		<html>
+		<head>
+
+	<style type='text/css'>
+		 @media only screen and (min-width: 1200px){
+		.seti{
+		width:731px;height:40px;color:#fff; background-color: #009e7f; padding: 15px 32px; text-align: center;
+		text-decoration: none; display: inline-block;
+		font-size: 20px;
+		border-radius:12px;
+		box-shadow:0 4px 5px 0 rgba(0, 0, 0, 0.14),
+		0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+			}
+			
+		}
+		@media only screen and (max-width: 400px){
+			.seti{
+			font-weight:800;color:#00c853;
+			font-size: 28px;
+				}		
+			}
+	
+		
+	</style>
+	</head>
+	<body>
+	<div style=' padding-left:80px;padding-right:80px'>
+		<p class='seti '>
+		LapakRempah
+		</p>
+		<p style='font-size:18px; font-weight:600;margin-top:15px;'>
+		Selamat bergabung menjadi pengguna LapakRempah
+		</p>
+
+		<p style='font-size:16px; font-weight:400;margin-top:15px;'>
+		Hai <b>$nama</b> semoga kamu menikmati layanan terbaik kami di LapakRempah ini
+		</p>
+	
+
+	</div>
+
+	</body>
+	</html>
+
+		";
+
+		$this->m_dah->kirim_email($email,$subyek,$pesan);
+
+		if($this->email->send())
+		{
 			redirect(base_url().'index/userlogin/?alert=daftar-sukses');
+		}else
+		{
+			echo "gagal";
+		}	
+
+		// end send email
 		}else{
 			$this->load->view('cms/header');
 			$this->load->view('cms/daftar');
@@ -601,7 +661,7 @@ class Index extends CI_Controller {
 				);
 			$this->m_dah->insert_data($inv,'invoice');
 			$id_terakhir = $this->db->insert_id();
-			$no = "#XKM-00".$id_terakhir;
+			$no = "#LRM-00".$id_terakhir;
 			$w = array(
 				'id' => $id_terakhir
 				);
@@ -631,12 +691,13 @@ class Index extends CI_Controller {
 		<style type='text/css'>
 		 	@media only screen and (min-width: 1200px){
 			.seti{
-		    width:731px;height:40px;color:#fff; background-color: #6d9837; padding: 15px 32px; text-align: center;
-			text-decoration: none; display: inline-block;
-			font-size: 20px;
-				}
-				
-			}
+				width:731px;height:40px;color:#fff; background-color: #009e7f; padding: 15px 32px; text-align: center;
+				text-decoration: none; display: inline-block;
+				font-size: 20px;
+				border-radius:12px;
+				box-shadow:0 4px 5px 0 rgba(0, 0, 0, 0.14),
+				0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+					}
 			@media only screen and (max-width: 400px){
 				.seti{
 				font-weight:800;color:#00c853;
@@ -770,7 +831,7 @@ function order_nolog(){
 			);
 		$this->m_dah->insert_data($inv,'invoice');
 		$id_terakhir = $this->db->insert_id();
-		$no = "#XKM-00".$id_terakhir;
+		$no = "#LRM-00".$id_terakhir;
 		$w = array(
 			'id' => $id_terakhir
 			);

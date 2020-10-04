@@ -621,6 +621,24 @@
 						});
 					});		
 
+					// ini keranjang di index produx
+					$('body').on("click",".keranjang-dulu-ind",function(){
+						var id = $(this).attr('id');
+						var jumlah_produk =1;
+						var stock_hasil = 1;
+					
+						$.ajax({
+							type: 'POST',
+							url: "<?php echo base_url(); ?>" + "index/addtocart2",
+							data: "id="+id +'&jumlah_produk='+jumlah_produk +'&stock_hasil='+stock_hasil,
+							success: function(){
+								window.location.reload(); 
+							},
+							error: function() {
+								alert("Gagal menuju laman pembayaran mohon diulangi lagi !");
+							}
+						});
+					});	
 
 
 	$('body').on("change",".form-provinsi",function(){

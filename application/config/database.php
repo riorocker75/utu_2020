@@ -72,18 +72,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $active_group = 'default';
 $query_builder = TRUE;
+// 'username' => 'u619955691_rempah',
+// 'password' => 'Qwerty1234',
+// 'database' => 'u619955691_rempah',
 
+// 'username' => 'root',
+// 'password' => '',
+// 'database' => 'utu_cek',
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'utu_cek',
-
-	// 'username' => 'u619955691_rempah',
-	// 'password' => 'u619955691_rempah',
-	// 'database' => 'Qwerty1234',
-
+	'username' => 'u619955691_rempah',
+	'password' => 'Qwerty1234',
+	'database' => 'u619955691_rempah',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
