@@ -42,8 +42,62 @@
 
 <!-- nsearchnav -->
 <!-- ini buat ditampilkan di ukuran desktop -->
+  <div class="topbar-cus">
+            <div class="row">
+      <div class="container-custom">
+      <div class="topheader">
+      
+            <div class="topbar-right float-left" style="margin-left:-40px">
+          <ul>
+            <li>
+              <a data-target="#modal-lacak" data-toggle="modal">Pesanan</a>
+            </li>
+            <li>
+              <a data-target="#modal-resi" data-toggle="modal">Cek resi</a>
+            </li>
+            
+          <li>
+            <a href="<?php echo base_url().'index/tentang'?>">
+             Bantuan
+           </a>
+          </li>
+
+          </ul>
+      </div>
+
+      <div class="topbar-right float-right" style="margin-left:-40px">
+        <ul>
+        
+          <li>
+            <a href="<?php echo base_url().'index/tentang'?>">
+              Tentang
+           </a>
+          </li>
+
+          <li>
+            <a href="<?php echo base_url().'index/tentang'?>">
+              Kontak
+           </a>
+          </li>
+
+          <li>
+            <a href="<?php echo base_url().'index/tentang'?>">
+             Pembayaran
+           </a>
+          </li>
+
+        </ul>
+      </div>
+      </div>
+
+            </div>
+      </div>
+  </div>
+
+  <!-- end top bar -->
 <div class="search-nav d-none d-md-none d-lg-block" id="search-nav">
   <div class="container-custom">
+   
     <div class="row">
     <div class="bag-header">
       <div class="col-lg-3">
@@ -68,10 +122,7 @@
       <div class="col-lg-5">
           <div class="float-right">
             <ul class="search-right">
-            <?php if($this->session->userdata('user_status') != "login"){?>
-              <li><a href="" style="font-weight:600">Pesanan</a></li>
-            <?php }else{}?> 
-              <li><a href="<?php echo base_url()?>/index/tentang" style="font-weight:600">Tentang</a></li>
+            
 
               <!-- disini buat logika jika dia masuk ke akun -->
               <?php if($this->session->userdata('user_status') != "login"){?>
@@ -218,6 +269,8 @@
      </div>
   </div>
 </div>
+
+
 <!-- end mobile -->
 
  <!-- end searchnav -->

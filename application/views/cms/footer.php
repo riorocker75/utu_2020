@@ -17,7 +17,7 @@
 			<i class="fa fa-shopping-bag"></i>&nbsp;&nbsp;<?php echo count($this->cart->contents()); ?>&nbsp;produk
 		</div>
 		<div class="total-keranjang">
-		<?php echo "Rp.". number_format($this->cart->total()).',-' ?>
+		<?php echo "Rp.". number_format($this->cart->total()) ?>
 		</div>
 	<?php }else{?>
 		<div class="item-keranjang">
@@ -38,9 +38,9 @@
 	<!-- show keranjang -->
 		<div class="show-keranjang">
 			<div class="title-skeranjang">
-				<i class="fa fa-shopping-bag"></i>&nbsp;&nbsp;
-				<span class="tx-16"><?php echo count($this->cart->contents()); ?>&nbsp;produk</span>
-				<span class="float-right" style="cursor:pointer" id="tutup-keranjang">x</span>
+				<!-- <i class="float-right fa fa-shopping-bag"></i>&nbsp;&nbsp; -->
+				<span class="tutup-ker" style="cursor:pointer" id="tutup-keranjang" title="tutup keranjang">x</span>
+				<span class="float-right tx-16"><?php echo count($this->cart->contents()); ?>&nbsp;produk</span>
 			</div>
 
 

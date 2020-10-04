@@ -5,8 +5,8 @@
 <div class="main-banner d-md-none d-none d-lg-block">
     <div class="banner-index">
       <div class="judul-banner">
-          <h1>Hanya saja mencoba</h1>
-          <p style="color:rgb(119, 121, 140);">Semua yang ada disini halal dan dapat ditemukan dimana saja</p>
+          <h1>Lapaknya Bumbu Masakan</h1>
+          <p style="color:rgb(119, 121, 140);">Semua bumbu masakan ada disini tanpa repot racikanya</p>
           <br>
         <!-- mulai pencarian banner-->
           <div class="cari-banner">
@@ -21,6 +21,61 @@
 </div>
 
 <!-- end banner -->
+
+<div class="d-md-block d-lg-none d-block" style="background:#fff;padding:20px 0;">
+<div class="container-custom">
+  
+       <div class="carimobile">
+       <form action="<?php echo base_url().'search'?>" method="post" class="cari-header">
+            <i class="fa fa-search" style="margin-left:10px"></i>
+                <input type="text"  class="input-banner" placeholder="Cari disini " name="item">
+                <input
+                type="submit"
+                name="submit"
+                class="btn-bordered-icon btn-find "
+                value="Cari"
+             hidden />
+            </form>             
+       </div>          
+    
+</div>
+</div>
+
+<!-- carousel gambar -->
+<div style="background:#fff;padding:20px 0;">
+<div class="container-custom">
+<div class="slider-prepro">
+  <div class="row">
+    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+      <div class="imgpre-pro"></div>
+      
+    </div>
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+      <div class="imgpre-pro"></div>
+      
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+      <div class="imgpre-pro"></div>
+      
+    </div>
+  </div>
+</div>
+<section class="variable slider slider-ind" style="margin-bottom:40px;" id="slider-indj">
+    <div class="img-slick-slider">
+      <img src="<?php echo base_url()?>dah_image/default/ongkir.png">
+    </div>
+    <div class="img-slick-slider">
+      <img src="<?php echo base_url()?>dah_image/default/diskon.png">
+    </div>
+    <div class="img-slick-slider">
+      <img src="<?php echo base_url()?>dah_image/default/paket.png">
+    </div>
+  
+  </section>
+</div>
+</div>
+<!-- end carousel gambar -->
+
 
 <div class="container-custom">
 <!-- alasan berbelanja dikami -->

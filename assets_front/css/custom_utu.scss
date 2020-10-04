@@ -29,7 +29,9 @@
 
 }
 
-
+.topheader{
+  padding: 0 50px;
+}
 .bag-header{
   padding: 20px 50px;
     display: flex;
@@ -78,6 +80,51 @@
 
 // end header
 
+// topbar
+.topbar-cus{
+  // display: flex;
+  height: 32px;
+  z-index: 3;
+  background-color: #F3F4F5;
+  border-bottom: 1px solid rgb(243, 243, 243);
+  // -webkit-box-pack: justify;
+  // justify-content: space-between;
+  left: 0px;
+  position: relative;
+}
+
+.topbar-right {
+  margin-top: 5px;
+  color: rgba(49, 53, 59, 0.68);
+  font-size: 12px;
+  li {
+    display: inline-block;
+    margin: 0px 10px;
+    max-width: 100%;
+  }
+
+  a {
+    color: rgba(49, 53, 59, 0.68);
+    text-decoration: underline transparent;
+    i {
+      font-size: 20px;
+    }
+
+    :hover {
+      color: rgba(49, 53, 59, 0.68)!important;
+      opacity: 0.7;
+    }
+  }
+}
+// end topbar
+
+// carimobile
+.carimobile{
+  margin: 50px 0;
+  width: 100%;
+  background: #fff;
+}
+// end carimobile
 // bagian index body
 .main-banner{
     height: 100%;
@@ -1947,4 +1994,15 @@ appearance: none;
     line-height: 1;
     background-color: rgba(46, 112, 250, 0.1);
     border-radius: 6px;
+}
+
+.tutup-ker{
+  width: 30px;
+  height: 30px;
+  box-shadow: $box-shadow-2dp;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.tutup-ker:hover{
+  color:$danger-co!important;
 }

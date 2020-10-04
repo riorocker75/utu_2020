@@ -650,7 +650,7 @@ class Index extends CI_Controller {
 		<body>
 		<div style=' padding-left:80px;padding-right:80px'>
 			<p class='seti '>
-			SerbaUMBI
+			LapakRempah
 			</p>
 			<p style='font-size:18px; font-weight:600;margin-top:15px;'>
 			Tagihan Transaksi <b>$no</b>
@@ -819,7 +819,7 @@ function order_nolog(){
 	<body>
 	<div style=' padding-left:80px;padding-right:80px'>
 		<p class='seti '>
-		SerbaUMBI
+		LapakRempah
 		</p>
 		<p style='font-size:18px; font-weight:600;margin-top:15px;'>
 		Tagihan Transaksi <b>$no</b>
