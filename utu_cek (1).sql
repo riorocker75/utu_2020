@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2020 at 09:53 AM
+-- Generation Time: Oct 04, 2020 at 12:01 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.4
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `utu_1`
+-- Database: `utu_cek`
 --
 
 -- --------------------------------------------------------
@@ -200,15 +200,19 @@ CREATE TABLE `dah_products` (
 --
 
 INSERT INTO `dah_products` (`prod_id`, `prod_author`, `prod_date`, `prod_name`, `prod_desc`, `prod_berat`, `prod_qty`, `prod_img1`, `prod_img2`, `prod_img3`, `prod_img4`, `prod_price`, `prod_bukalapak`, `prod_tokopedia`, `prod_kirim`, `prod_lokasi`, `prod_terjual`, `prod_jasa_kirim`, `prod_status`) VALUES
-(65, 1, '2019-09-20', 'Wortel Segar ', 'Wortel segar dipanen langsung dari kebun,\r\nminimal pembelian 1 KG\r\n\r\nKhusus pemesanan area Lhokseumawe, gratis onkir dengan syarat pembelian minimal 5 KG', 1000, 50, '1136755971wartel.jpg', '1783327273_Carrots_2014_1.jpg', '1783327273_Carrots_2014_11.jpg', NULL, 8500, '#', '#', '', 'Lhokseumawe', '', 'JNE', 'Publish'),
-(66, 1, '2019-09-20', 'Bawang Merah Kampung', 'Bawang Merah kampung atau dikenal juga dengan bawang merah Aceh.\r\nPerbedaan bisa di lihat di ukuran. Ukuran bawang merah kampung lebih kecil dari ukuran bawang lainnya.\r\nSyarat pembelian :\r\n1. Minimal order 1 KG\r\n2. Khusus area Lhokseumawe gratis ongkir dengan pembelian minimum 5 KG.\r\n', 1000, 50, '979228716_cara-menanam-bawang-merah-640x393.jpg', NULL, NULL, NULL, 28000, '#', '#', 'Dikirim hari pembelian', 'Lhokseumawe', '', 'JNE, POS, TIKI,J&T, Jasa ', 'Publish'),
-(67, 1, '2019-09-20', 'Talas Pontianak Ungu', 'Talas Pontianak Ungu,\r\n\r\n\r\nHalo buyer talas pontianak.\r\nKami adalah supplier talas pontianak, domisili kota Lhokseumawe, Aceh. Kami bisa memenuhi permintaan market anda perminggu atau pun per bulan, dengan manimal order 10 kg.\r\n', 10000, 100, '4412212541001157talas-bogor-20160514-150614780x390.jpg', NULL, NULL, NULL, 35000, '#', '#', 'Dikirim hari pembelian', 'Lhokseumawe', '', 'JNE, POS, TIKI,J&T, Jasa ', 'Publish'),
-(68, 1, '2019-09-20', 'Ubi Talas Segar', 'Ubi talas atau mbote merupakan jenis umbi-umbian yang tumbuh subur di tanah gembur dan berudara sejuk. Umbi ini mengandung tepung yang membuat kenyang ketika dikonsumsi.\r\nKandungan kalori yang tinggi dalam ubi talas bisa menjadikannya alternatif makanan pokok pengganti nasi. Ubi talas baik bagi kesehatan karena kaya akan kandungan vitamin A dan vitamin C.\r\n', 1000, 100, '206104775_038-04-Ubi-Talas.jpg', NULL, NULL, NULL, 10500, '#', '#', 'Dikirim hari pembelian', 'Lhokseumawe', '', 'JNE, POS, TIKI,J&T, Jasa ', 'Publish'),
-(69, 1, '2019-09-20', 'Lobak Gayo Segar', 'Aslinya tanaman lobak berasal dari daratan China. Mirip dengan wortel, jenis sayuran akar ini warnanya bermacam-macam. Tapi yang paling umum dijual di pasaran adalah yang berwarna putih.\r\n\r\nLobak putih memiliki banyak manfaat untuk kesehatan. Lobak putih mengandung vitamin A, B1, B2, C dan vitamin E, minyak atsiri, beta karoten, mangan, kolin dan asam folik. Juga kaya akan serat, kalsium, zat besi, fosfor serta asam oksalat.', 1000, 100, '9385357038-05-Lobak.jpg', NULL, NULL, NULL, 15000, '#', '#', 'Dikirim hari pembelian', 'Lhokseumawe', '', 'JNE, POS, TIKI,J&T, Jasa ', 'Publish'),
-(70, 1, '2019-09-20', 'Ubi Jalar Madu', 'ubi jalar madu kualitas terbaik,siap melayani pesanan wilayah Aceh.', 1000, 100, '15812678194-cara-ubi-jalar-bantu-turunkan-berat-badan.jpg', NULL, NULL, NULL, 5300, '#', '#', 'Dikirim hari pembelian', 'Sare', '', 'JNE, POS,, Jasa', 'Publish'),
-(71, 1, '2019-09-20', 'Jaual Ubi Jalar ( Ketela Rambat ) ', 'kami menjual ubi jalar berbagai varian ( jenis ) untuk kebutuhan pasar maupun supllay pabrik ', 1000, 100, '1595802324panen-ubi-jalar-o6c3kd-prv.jpg', NULL, NULL, NULL, 4300, '#', '#', 'Dikirim hari pembelian', 'Sare', '', 'JNE, POS,, Jasa', 'Publish'),
-(72, 1, '2019-09-20', 'Kentang Granola (super/a/b/c) Kualitas Bersaing', 'KENTANG GRANOLA YANG DI PRODUKSI PARA PETANI TAKENGON. TERSEDIA BERBAGAI GRADE DARI SUPER HINGGA C. MUTU PRODUK YANG TERJAMIN DENGAN QC YANG KETAT. MENGHASILKAN BARANG YANG DIKIRIM MEMILIKI MUTU YANG BAIK.', 1000, 100, '314600664-_180716061323-967.jpg', NULL, NULL, NULL, 12300, '#', '#', 'Dikirim hari pembelian', 'Takengon', '', 'JNE, POS,, Jasa', 'Publish'),
-(73, 1, '2019-09-20', 'Bengkoang Mungil', 'Bengkoang Mungil asli panen dari Sare', 1000, 100, '570082390khasiat-bengkuang.jpg', NULL, NULL, NULL, 13200, '#', '#', 'Dikirim hari pembelian', 'Sare', '', 'JNE, POS, Jasa', 'Publish');
+(65, 1, '2019-09-20', 'Lada Hitam', 'lada hitam', 1000, 50, '1613370391_lada_hitam.png', '', '', NULL, 8500, '#', '#', '', 'Lhokseumawe', '', 'JNE', 'Publish'),
+(66, 1, '2019-09-20', 'Ketumbar', 'Ketumbar', 1000, 50, '1667816517_ketumbar.png', NULL, NULL, NULL, 28000, '#', '#', 'Dikirim hari pembelian', 'Lhokseumawe', '', 'JNE, POS, TIKI,J&T, Jasa ', 'Publish'),
+(67, 1, '2019-09-20', 'Kemiri', 'Kemiri\r\n\r\n\r\nHalo buyer talas pontianak.\r\nKami adalah supplier talas pontianak, domisili kota Lhokseumawe, Aceh. Kami bisa memenuhi permintaan market anda perminggu atau pun per bulan, dengan manimal order 10 kg.\r\n', 10000, 100, '1103847561_kemiri.png', NULL, NULL, NULL, 35000, '#', '#', 'Dikirim hari pembelian', 'Lhokseumawe', '', 'JNE, POS, TIKI,J&T, Jasa ', 'Publish'),
+(68, 1, '2019-09-20', 'Cengkeh', 'cengkeh', 1000, 100, '629605846_cengkeh.png', NULL, NULL, NULL, 10500, '#', '#', 'Dikirim hari pembelian', 'Lhokseumawe', '', 'JNE, POS, TIKI,J&T, Jasa ', 'Publish'),
+(69, 1, '2019-09-20', 'Daun Salam', 'daun salam', 1000, 100, '40360859_daun_salam.png', NULL, NULL, NULL, 15000, '#', '#', 'Dikirim hari pembelian', 'Lhokseumawe', '', 'JNE, POS, TIKI,J&T, Jasa ', 'Publish'),
+(70, 1, '2019-09-20', 'Bunga Lawang', 'Paket bunga lawang', 1000, 100, '732982708_bunga_lawang.png', NULL, NULL, NULL, 5300, '#', '#', 'Dikirim hari pembelian', 'Sare', '', 'JNE, POS,, Jasa', 'Publish'),
+(71, 1, '2019-09-20', 'Kayu Manis dan Bunga Lawang', 'Kayu manis dan bunga lawang', 1000, 100, '1421615531_kayu_masni_lawang.png', NULL, NULL, NULL, 4300, '#', '#', 'Dikirim hari pembelian', 'Sare', '', 'JNE, POS,, Jasa', 'Publish'),
+(72, 1, '2019-09-20', 'Sereh Sumatra', 'Sereh', 1000, 100, '2055762885_serai_mock.png', NULL, NULL, NULL, 12300, '#', '#', 'Dikirim hari pembelian', 'Medan', '', 'JNE, POS,, Jasa', 'Publish'),
+(73, 1, '2019-09-20', 'Jahe', 'Bengkoang Mungil asli panen dari Sare', 1000, 100, '1765680615_jahe_mockuup.png', NULL, NULL, NULL, 13200, '#', '#', 'Dikirim hari pembelian', 'Sare', '', 'JNE, POS, Jasa', 'Publish'),
+(74, 1, '2020-09-16', 'Kunyit', 'sasdasd', 1000, 200, '1335601399_kunyit_mouc.png', NULL, NULL, NULL, 50000, '', '', '3-4', 'Bireun', '', 'JNE,TIki', 'Publish'),
+(75, 1, '2020-09-23', 'Lengkuas laos', '', 600, 122, '1673201754_lengkuas.png', NULL, NULL, NULL, 60000, '', '', '3', 'ssa', '', 'sdasd', 'Publish'),
+(76, 1, '2020-10-04', 'Kayu secang', 'kayu secang', 500, 200, '1083392096_kayu_secang.png', NULL, NULL, NULL, 15000, '', '', '3-4 hari', 'Lhokseumawe', '', 'TIki', 'Publish'),
+(77, 1, '2020-10-04', 'Kapulaga', 'kapulaga', 500, 100, '1332890552kapulaga.png', NULL, NULL, NULL, 20000, '', '', '3-4 hari', 'Aceh Utara', '', 'Pos Indonesia', 'Publish');
 
 -- --------------------------------------------------------
 
@@ -228,14 +232,10 @@ CREATE TABLE `dah_product_category` (
 
 INSERT INTO `dah_product_category` (`pcat_id`, `pcat_name`, `pcat_sub`) VALUES
 (1, 'Uncategorized', 0),
-(6, 'Kentang', 0),
-(17, 'Ubi-ubian', 0),
-(29, 'Bawang', 0),
-(30, 'Wortel', 0),
-(31, 'Garut', 0),
-(32, 'Lobak', 0),
-(33, 'Bengkuang', 0),
-(34, 'Talas', 0);
+(35, 'Keripik', 0),
+(36, 'Bakso', 0),
+(37, 'Sosis', 0),
+(38, 'Stik', 0);
 
 -- --------------------------------------------------------
 
@@ -257,16 +257,19 @@ CREATE TABLE `dah_taxonomy` (
 INSERT INTO `dah_taxonomy` (`taxonomy_id`, `taxonomy_parent`, `taxonomy_child`, `taxonomy`) VALUES
 (70, 0, '1', 'product_category'),
 (103, 29, '1', 'post_category'),
-(264, 65, '30', 'product_category'),
-(269, 66, '29', 'product_category'),
-(270, 67, '34', 'product_category'),
-(273, 68, '17', 'product_category'),
-(274, 68, '34', 'product_category'),
-(275, 69, '30', 'product_category'),
-(276, 70, '17', 'product_category'),
-(277, 71, '17', 'product_category'),
-(278, 72, '6', 'product_category'),
-(279, 73, '33', 'product_category');
+(303, 73, '1', 'product_category'),
+(304, 74, '1', 'product_category'),
+(305, 72, '1', 'product_category'),
+(306, 75, '1', 'product_category'),
+(307, 71, '1', 'product_category'),
+(308, 70, '1', 'product_category'),
+(309, 69, '1', 'product_category'),
+(310, 68, '1', 'product_category'),
+(311, 67, '1', 'product_category'),
+(312, 66, '1', 'product_category'),
+(313, 65, '1', 'product_category'),
+(315, 76, '1', 'product_category'),
+(316, 77, '1', 'product_category');
 
 -- --------------------------------------------------------
 
@@ -289,7 +292,7 @@ CREATE TABLE `dah_users` (
 --
 
 INSERT INTO `dah_users` (`user_id`, `user_name`, `user_email`, `user_login`, `user_pass`, `user_level`, `user_status`) VALUES
-(1, 'Ferdian Alghazali', 'ferdian@gmail.com', 'diki', '43b93443937ea642a9a43e77fd5d8f77', 'admin', 1),
+(1, 'Ferdian Alghazali', 'ferdian@gmail.com', 'diki', 'dffaa4c60a250f19dc4a79b1d05c8d53', 'admin', 1),
 (2, 'muzanni', 'moezanni@gmail.com', 'muzanni', '0192023a7bbd73250516f069df18b500', 'admin', 1),
 (3, 'Azizi', 'tesdaftar@admin.com', 'pembeli', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'author', 1),
 (4, 'musliadi', 'akun@gmail.com', 'akun', 'ef9b53e0cf5c33b09139e641fee8bd96', 'author', 1);
@@ -1626,7 +1629,14 @@ CREATE TABLE `invoice` (
 
 INSERT INTO `invoice` (`id`, `no`, `tgl`, `user_id`, `nama`, `telp`, `email`, `metode`, `alamat`, `kurir`, `pembayaran`, `rek_bank`, `ongkir`, `resi`, `slip`, `status`, `kota`, `kecamatan`, `provinsi`, `kodepos`) VALUES
 (17, '#UMBI-0017', '2019-09-20', 75, 'hasan', '092271141611', '', NULL, 'hagu teungah, kota lhokseumawe', 'pos - Paket Kilat Khusus', 73000, 'bm1', 52000, NULL, NULL, 0, '235', 'Banda Sakti', '21', 24253),
-(18, '#UMBI-0018', '2019-09-26', 76, 'Muhammad Syah', '098765432112', '', NULL, 'Jalan Kenari nomer 5 Banda Sakti', 'pos - Paket Kilat Khusus', 64300, 'bm1', 52000, NULL, NULL, 0, '235', 'Banda Sakti', '21', 2431);
+(18, '#UMBI-0018', '2019-09-26', 76, 'Muhammad Syah', '098765432112', '', NULL, 'Jalan Kenari nomer 5 Banda Sakti', 'pos - Paket Kilat Khusus', 64300, 'bm1', 52000, NULL, NULL, 0, '235', 'Banda Sakti', '21', 2431),
+(19, '#UMBI-0019', '2020-09-05', 78, 'tester', '08523211', 'tesdulu@tes.com', NULL, 'Seumsmq', 'pos - Express Next Day Barang', 37600, 'bm1', 13000, NULL, NULL, 0, '104', 'sasdasd', '9', 25555),
+(20, '#UMBI-0020', '2020-09-05', 78, 'tester', '08526456', 'tesdulu@tes.com', NULL, 'Sumenqp', 'pos - Paket Kilat Khusus', 114200, 'bm1', 22000, NULL, NULL, 0, '153', 'suqe', '6', 852),
+(21, '#UMBI-0021', '2020-09-05', 78, 'tester', '085652332', 'tesdulu@tes.com', NULL, 'kiloqiw', 'pos - Paket Kilat Khusus', 32200, 'bm1', 11000, NULL, NULL, 0, '152', 'asdasd', '6', 123123),
+(22, '#UMBI-0022', '2020-09-05', 78, 'tester', '212312', 'tesdulu@tes.com', NULL, 'dasd', 'pos - Paket Kilat Khusus', 60200, 'Pilih Bank', 11000, NULL, NULL, 0, '55', 'asdasd', '9', 123123),
+(23, '#XKM-0023', '2020-09-05', 78, 'tester', '123123123', 'tesdulu@tes.com', NULL, 'adsdasd', 'pos - Paket Kilat Khusus', 54200, 'bm1', 41000, NULL, NULL, 0, '64', 'dasd', '4', 123123),
+(24, '#UMBI-0024', '2020-09-29', 7295, 'sumatow', '082542315', 'umam@yahoo.com', NULL, 'jsjqhhhq', 'pos - Express Next Day Barang', 65500, 'bm2', 15500, NULL, NULL, 0, '152', 'asdasd', '6', 234123),
+(25, '#UMBI-0025', '2020-09-29', 2509, 'sumail', '08625524', 'gamesourmaktab@gmail.com', NULL, 'medan', 'pos - Paket Kilat Khusus', 115500, 'bm2', 15500, NULL, NULL, 0, '402', 'sasda', '3', 54556);
 
 -- --------------------------------------------------------
 
@@ -1669,7 +1679,15 @@ INSERT INTO `orders` (`order_id`, `order_invoice`, `order_produk`, `order_harga`
 (19, 13, 36, 90000, 1, NULL),
 (20, 14, 64, 95000, 1, NULL),
 (23, 17, 68, 10500, 2, NULL),
-(24, 18, 72, 12300, 1, NULL);
+(24, 18, 72, 12300, 1, NULL),
+(25, 19, 72, 12300, 2, NULL),
+(26, 20, 71, 4300, 4, NULL),
+(27, 20, 69, 15000, 5, NULL),
+(28, 21, 70, 5300, 4, NULL),
+(29, 22, 72, 12300, 4, NULL),
+(30, 23, 73, 13200, 1, NULL),
+(31, 24, 74, 50000, 1, NULL),
+(32, 25, 74, 50000, 2, NULL);
 
 -- --------------------------------------------------------
 
@@ -1697,75 +1715,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `nama`, `password`, `status`, `telp`, `alamat`, `provinsi`, `kota`, `kecamatan`, `kelurahan`, `kodepos`) VALUES
-(9, 'fraidian651@gmail.com', 'Fraidian Atqwa', '40c77f720c382abc9c99bf8abbfc39c3', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(10, 'diki@gmail.com', 'diki', 'dffaa4c60a250f19dc4a79b1d05c8d53', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(12, 'malasthat@gmail.com', 'malas', '521cc77d6a5786aa4d7db5097238abd8', 1, '085360080642', 'jl listrik gg palem no 1', 'aceh', 'lhokseumawe', 'banda sakti', NULL, 23256),
-(13, 'edowaykristovel@yahoo.co.id', 'Kristovel Edoway', '448375fb8ccc5d8f3af6c855cc3a6156', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(14, 'malas@gmail.com', 'pemalas', '6e413ea6a2bb937b9106fa21004965da', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(15, 'arifmuhamad1337@gmail.com', 'Arif Muhammad', '557ba50239fcd2b4f813c76cf9c3efd2', 1, '081295085279', 'Perumahan papan mas Jalan Merpati 3 Blok G 62 no.13 rt 06 rw 09', 'Jawa Barat', 'Bekasi', 'Tambun Selatan', NULL, 17510),
-(16, 'zamzamfahrurozi12@gmail.com', 'zamzamfahrurozi', '85648fb0a9baf7d34e410c17cc648ac0', 1, '089', 'kp.nangkelan', 'jawabarat', 'garut', 'samarang', NULL, 41466),
-(17, 'hasruldani6@gmail.com', 'hasruldani', 'd063d02b3d3397c343b041c03145092c', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(18, 'gunawanr14@gmail.com', 'Gunawan Raharjo', 'e35ab3185502ced60146a8d6310f2f19', 1, '083837388547', 'Jala Temanggung No 34 Rt/Rw 03/06', 'Jawa Tengah', 'Tegal', 'Margadana', NULL, 52143),
-(19, 'reynaldiaznan450@gmail.com', 'Reynaldi Aznan', 'e10adc3949ba59abbe56e057f20f883e', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(20, 'rayhanprima99@gmail.com', 'Ahmed Rayhan Primadedas', 'f3d54339f3ac215649a1233127c04f30', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(21, 'avenged.dody@gmail.com', 'Ath Thoriq dody ath mansyah', '0546456e0f33398ad7b11e214c2c5b37', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(22, 'arf.pnp.amd@gmail.com', 'Arif', 'ab9b9195d1adda8e7aedc41235dd2e59', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(23, 'yolsak30@gmail.com', 'Yolsa Kolosra', '069c546d1d97fd9648d8142b3e0fd3a3', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(24, 'Nafan.San1709@gmail.com', 'Nafasansono Harefa', 'cc568c3d81f3e13063a7f2cbd1b7ccb2', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(25, 'the.sun.007@gmail.com', 'Surya fajar', 'f20e310901d63285ba4a709312ee3aad', 1, '085246515452', 'Jl. Padat Karya No. 12 Sempaja Utara (jalan masuk ke Perum Bengkuring, Seberang Klinik dr. Wilsa)', 'Kalimantan Timur', 'Samarinda', 'Samarinda Utara', NULL, 75123),
-(26, 'hasank.smart@gmail.com', 'Hasanudin ', '45ada73995520c52540d472626e1d494', 1, '087875875047', 'jalan lingkungan kaliwadas Rt 03 Rw 06 Perbatasan Cimuncang Serang-Banten', 'Banten', 'Serang ', 'Serang ', NULL, 42111),
-(27, 'umarro@gmail.com', 'umar harjanto', 'b3abdf7ac27b8b2393f013081cde8560', 1, '081511135905', 'd.a. pt. indogravure, jl. pahlawan no. 8 rempoa', 'banten', 'tangerang selatan', 'ciputat', NULL, 15412),
-(28, 'aulajaa15@gmail.com', 'Aulia Rahman', '6176bfc198db8efa988c3d23501e43d5', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(29, 'bayu.fs20@gmail.com', 'Bayu Fitri Sopyan', 'd0b7fe98b37aa7d75770703f407121f6', 1, '081563111604', 'Jl.Tititmplik Dalam No. 102 RT/01. RW/06 Kel.Sadang Serang ', 'Jawa Barat', 'Bandung', 'Coblong', NULL, 40133),
-(30, 'vincen.olaf91@gmail.com', 'Vicencius Olaflia Rosantono', 'bc3625c37b208bd2ceafb4b7eb838a53', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(31, 'abdasispif@gmail.com', 'Abd Asis', '7657f3205b3749482500a17ad88a657b', 1, '083852411183', 'Dsn. Bandungan, Ds. Rongdurin', 'Jawa Timur', 'Bangkalan', 'TanahMerah', NULL, 69172),
-(32, 'okyunus60@gmail.com', 'yunus', 'bf5e67c968161d8fbb0a4172d4aa2cd4', 1, '082234905751', 'jne kraksaan', 'jawa timur', 'kraksaan', 'kecamatan', NULL, 67282),
-(33, 'damasangga9@gmail.com', 'damas angga', '6ccf929934691710135f3f0df7cc43c5', 1, '089694553552', 'Jalan Tanjung Sanyang RT 006/08 No. 38', 'DKI Jakarta', 'Jakarta Timur', 'Kramat Jati', NULL, 13630),
-(34, 'Ma.gm.indramayu@gmail.com', 'Muflihuddin ahmad', '00e750b1f2eea354fcc530dc8d639e33', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(35, 'radhitsukamoto@gmail.com', 'Rachmad Hidayat', 'ece235401d994b11c656b19fa4befb4e', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(36, 'farkhanm23@yahoo.com', 'muhammad fakhan imfrozin febrian putra', '68f993348daf277e0c29d64eec68d4a8', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(37, 'imfrozin15@gmail.com', 'farkhantokae', '68f993348daf277e0c29d64eec68d4a8', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(38, 'sukkunonsu@gmail.com', 'Sukkun Aritonang', 'b2af2f7e6b4cb735da1efb5ab5ca31d9', 1, '085338529896', 'Perumahan Melati Garden Blok I No. 03', 'Kepulauan Riau', 'Batam', 'Sekupang', NULL, 29426),
-(39, 'tasdiq.bmth@gmail.com', 'tasdiq siregar', 'fcc38bbf485107f6eca2093e542f339d', 1, '085249783762', 'JL.SWADAYA 4 KARANGASEM, CONDONGCATUR, DEPOK, SLEMAN', 'D.I YOGYAKARTA', 'kabupaten Sleman', 'Condongcatur', NULL, 55283),
-(40, 'suwino204@gmail.com', 'Suwino', '05daef6c8f67742973e7314420d6c0e7', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(41, 'ryanwicida@gmail.com', 'Ryan', '4411787e47cec21af45421c9554a1d7c', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(42, 'david.andriyan@gmail.com', 'David Andriyan S.', '9dbebf664dc054459496e1ed5a306ec8', 1, '082122251270', 'KPPN Denpasar GKN I Jl. Dr. Kusuma Atmaja Nitimandala Renon', 'Bali', 'Denpasar', 'Denpasar Timur', NULL, 80235),
-(43, 'demensinden@yandex.com', 'demensinden', '8ea9b666b4a617a28fdc8623605d08b2', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(44, 'meandobe@gmail.com', 'mean ', 'e4d60ca72739c99324f249a8196363e6', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(45, 'carimodal@gmail.com', 'carimodal', 'd831fbcac7da252319aacac5350c9f55', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(46, 'popovshbrynt@gmail.com', 'Muhammad Popov Shabriyanto', '2ec0532b4522c53146649106340f53fe', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(47, 'ryuzakki009@gmail.com', 'ahmad ramadhan', '6501f3b02a84b543f47a0cde377acc8b', 1, '082316663189', 'larangan', 'jawa barat', 'indramayu', 'lohbener', NULL, 45252),
-(48, '2311fadli@gmail.com', 'Fadli Muhlisiin', '11dcbef3d14dfce594612b15884da83a', 1, '08998535153', 'Puspanegara Citeureup Rt03/03', 'Jawa barat', 'Bogor', 'Citeureup', NULL, 16810),
-(49, 'desyramadhani477@gmail.com', 'Desy Ramadani', '6782c740311b55cfa21e8a405e3a118b', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(50, 'muhammadkhaidhir@linuxmail.org', 'Muhammad Khaidhir', '95eef42b904a343d9459b33679a31afe', 1, '082253046959', 'JL.Mas Negara Tembus Perumnas RT.43', 'Kalimantan Selatan', 'Banjarmasin', 'Banjarmasin Utara', NULL, 70123),
-(51, 'iqballsiddik7777@gmail.com', 'iqbal siddik', '4ac03ad3ae277c7c09221ee9fdfb4042', 1, '085720277508', 'Jalan Jurang Gg.masjid sabilulhuda No.610 Rt.04 Rw.05 Kel.pasteur Kec.Sukajadi', 'Jawa Barat', 'Bandung', 'Sukajadi', NULL, 40616),
-(52, 'befryloy@gmail.com', 'Maxmilianus Befry Loy', '6ca917da06ae3500ec1e849929ab3915', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(53, 'gnugraha5@gmail.com', 'Gugah Nugraha', 'fd8316d6eeb248e8d600a8587b5f3775', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(54, 'christofelmichael26@gmail.com', 'christofel michael', 'ad0f048882b380c6d9e5741f75027ceb', 1, '085361501718', 'Jl.Pembangunan III NO.45 ', 'Sumatera Utara', 'Medan', 'Medan Timur', NULL, 20238),
-(55, 'kampusmuhammadiyah@gmail.com', 'Yudi Prasetyo', 'e172dd95f4feb21412a692e73929961e', 1, '08123749003', 'JL. KH AHMAD DAHLAN NO.17 KOTA KUPANG NTT', 'NUSA TENGGARA TIMUR', 'KUPANG', 'OEBOBO', NULL, 8111),
-(56, 'dody.cpm@gmail.com', 'Dody Tanuwijaya', '162b84f420fd4b1e57d6e8865fa1bf5d', 1, '081383051440', 'jl.bungur raya no.12 rt.013/rw 06 kel.kebayoran lama utara', 'dki jakarta', 'jaksel', 'kebayoran lama', NULL, 12240),
-(57, 'angga.cadullah@gmail.com', 'angga', '48f52a052d924e8c53c184043c48aefa', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(58, 'defalt_404@yahoo.co.id', 'Mr.Wahyu', '95fa39ea437f858ae443b1b4d808bfb4', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(59, 'hery.fajar.isnawan@gmail.com', 'hery fajar isnawan', 'ee7d8c3595f71ee7c2c1f7b5c803065d', 1, '081273636600', 'Jl. Teratai no.50, Mulyojati 16c', 'lampung', 'kota metro', 'metro barat', NULL, 34111),
-(60, 'dadirosadi117@gmail.com', 'Dadi Rosadi', '1fa88aa70c15c6639c687203e7f77a41', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(61, 'dulkiyemfamily@gmail.com', 'angga chrisna widyanto', '4f8c6c43d5b9ebb3bc817691ae610eb7', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(62, 'Ibrahimbaim170@gmail.com', 'Ibrahimbaim', '57ac992cf4a8b01a22958a5d9f4a4286', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(63, 'dupanks@gmail.com', 'Erfan Gumelar', '6b4228fe3be6aec2c25d6cc8ab838d7a', 1, '085956656176', 'Jl. Margacinta Gang Iman 1 No. 68 A RT 002 / RW 002 Margasari Buah Batu Bandung', 'Jawa Barat', 'Bandung', 'Buah Batu', NULL, 40286),
-(64, 'business.afdhalul@gmail.com', 'Afdhalul Ichsan Yourdan', '624d93e21326410c4067323788c866d5', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(65, 'novia7a24@gmail.com', 'Novia RKS', '03dbc123137612a230b72b06382c45dd', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(66, 'reza.afrizal@gmail.com', 'reza afrizal', '9964c19b22a0700f351050f9cd2be4af', 1, '089690888005', 'Jalan Tabrani Ahmad Gang Gunung Tidar No. 18', 'Kalimantan Barat', 'Pontianak', 'Pontianak Barat', NULL, 78113),
-(67, 'vhidhie89@gmail.com', 'adi iman saputra', '4cbbf5ab74a69ca5ecd9edd70b084cdb', 1, '085768125959', 'Jalan Imam Bonjol Gang Lebak Budi 2 No.28 Kelurahan Sukajawa Baru', 'Lampung', 'Bandar Lampung', 'Tanjung Karang Barat', NULL, 35151),
-(68, 'Imron.saefulloh28@gmail.com', 'Imron saefulloh', '136d15a423600ea7f9c423023d10d969', 1, '082214394959', 'Dusun Lampeni Rt/Rw 18/004, Desa Tanjungsari Timur', 'Jawa barat', 'Subang', 'Cikaum', NULL, 41253),
-(69, 'ahmad.tabroni@outlook.com', 'Ahmad Tabroni', '7fbbeec8c5117133f2862d2d0a8bd65d', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(70, 'sukma.irawan@gmail.com', 'Sukma Irawan', 'ac8f9c49a75cf30c8786072e0af5e9e3', 1, '081519415333', 'Wisma GKBI lt 17 suite 1710, Jl Jend Sudirman No 28', 'DKI Jakarta', 'Jakarta Pusat', 'Tanah Abang', NULL, 10210),
-(71, 'alfatihmubarok@yahoo.co.id', 'alfatihmubarok', 'f10a7d6688dcd12bac6c66e74993cf2a', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(72, 'admin@admin.com', 'nama_ja', '3fc0a7acf087f549ac2b266baf94b8b1', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(73, 'tesdaftar@admin.com', 'qwerssssss', 'd8578edf8458ce06fbc5bb76a58c5ca4', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(74, 'tesdaftarlagi@admin.com', 'Shalan Nasution', '3fc0a7acf087f549ac2b266baf94b8b1', 1, '085287990', 'Jalan Aksarsf', 'Aceh Tenggara', 'Blangkejeren', 'Aceh tenggara', NULL, 321344),
-(75, 'admin@gmail.com', 'admin', '0192023a7bbd73250516f069df18b500', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(76, 'jamalpdh@gmail.com', 'jalamal', '325077d1d7b6fa325b095fb212f3bc42', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(77, 'indra.ib.budi@gmail.com', 'ib', 'df8f614e30e694c4670859a5f6368734', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(78, 'tesdulu@tes.com', 'cobacuy', 'd8578edf8458ce06fbc5bb76a58c5ca4', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(78, 'tesdulu@tes.com', 'tester', 'd8578edf8458ce06fbc5bb76a58c5ca4', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(86, 'gamesourmaktab@gmail.com', 'sumail', 'd8578edf8458ce06fbc5bb76a58c5ca4', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -1905,19 +1856,19 @@ ALTER TABLE `dah_posts`
 -- AUTO_INCREMENT for table `dah_products`
 --
 ALTER TABLE `dah_products`
-  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT for table `dah_product_category`
 --
 ALTER TABLE `dah_product_category`
-  MODIFY `pcat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `pcat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `dah_taxonomy`
 --
 ALTER TABLE `dah_taxonomy`
-  MODIFY `taxonomy_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=280;
+  MODIFY `taxonomy_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=317;
 
 --
 -- AUTO_INCREMENT for table `dah_users`
@@ -1941,19 +1892,19 @@ ALTER TABLE `dah_widget`
 -- AUTO_INCREMENT for table `invoice`
 --
 ALTER TABLE `invoice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

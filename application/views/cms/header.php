@@ -102,7 +102,9 @@
     <div class="bag-header">
       <div class="col-lg-3">
           <div class="float-left">
-              <h3>Coming Soon</h3>
+              <div class="logo-rempah">
+                  <img src="<?php echo base_url().'dah_image/default/logorempah2.png'?>" alt="" srcset="">
+              </div>
         </div>
       </div>
 

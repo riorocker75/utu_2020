@@ -5,13 +5,13 @@
 <div class="main-banner d-md-none d-none d-lg-block">
     <div class="banner-index">
       <div class="judul-banner">
-          <h1>Lapaknya Bumbu Masakan</h1>
-          <p style="color:rgb(119, 121, 140);">Semua bumbu masakan ada disini tanpa repot racikanya</p>
+          <h1>Lapaknya Rempah Indonesia</h1>
+          <p style="color:rgb(119, 121, 140);">Semua rempah disini hasil dari petani lokal </p>
           <br>
         <!-- mulai pencarian banner-->
           <div class="cari-banner">
             <form action="<?php echo base_url().'search'?>" method="post" class="form-cari-banner">
-              <input type="text" class="input-banner" placeholder="Cari kebutuhan kamu disini"  name="item">
+              <input type="text" class="input-banner" placeholder="Cari rempah yang kamu butuhkan"  name="item">
               <input type="submit" class="submit-banner" value="Temukan"  name="submit">
             </form>
           </div>
