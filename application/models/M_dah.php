@@ -217,8 +217,8 @@ class M_dah extends CI_Model{
 				// $config['smtp_host']= "ssl://smtp.gmail.com";
 	
 				$config['smtp_timeout']= "10";
-				$config['smtp_user']= "layanan.serbaumbi@gmail.com"; // isi dengan email kamu
-				$config['smtp_pass']= "maktab1234"; // isi dengan password kamu
+				$config['smtp_user']= "layananlapakrempah@gmail.com"; // isi dengan email kamu
+				$config['smtp_pass']= "Maktab1234"; // isi dengan password kamu
 				$config['crlf']="\r\n"; 
 				$config['newline']="\r\n"; 
 				$config['wordwrap'] = TRUE;

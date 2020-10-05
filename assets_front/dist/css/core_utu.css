@@ -530,11 +530,19 @@ body {
 }
 
 .notfound {
+  text-align: center;
   margin: 40px 0;
 }
 
 .notfound img {
+  height: 600px;
   max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .notfound img {
+    max-width: 100%;
+  }
 }
 
 .cart-view {

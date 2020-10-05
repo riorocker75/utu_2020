@@ -4,7 +4,7 @@
 
         <div class="notfound">
         
-                <img src="<?php echo base_url()?>dah_image/system/404gambar.png" alt="" srcset="">
+                <img src="<?php echo base_url()?>dah_image/system/404_page.png" alt="" srcset="">
         </div>
     </div>
 </div>

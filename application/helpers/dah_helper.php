@@ -41,7 +41,7 @@ function show_alert(){
 		}else if($alert == "update-cart"){
 			echo "<div class='text-center alert alert-success alert-dah'>Keranjang berhasil di update.<span class='glyphicon glyphicon-remove pull-right btn-hide-alert'></span></div>";
 		}else if($alert == "order-sukses"){
-			echo "<div class='text-center alert alert-success alert-dah'>Order berhasil ! Silahkan lakukan pembayaran.<span class='glyphicon glyphicon-remove pull-right btn-hide-alert'></span></div>";
+			echo "<div class='text-center alert alert-success alert-dah'>Order berhasil ! cek email anda untuk keterangan pembayaran.<span class='glyphicon glyphicon-remove pull-right btn-hide-alert'></span></div>";
 		}else if($alert == "daftar-sukses"){
 			echo "<div class='text-center alert alert-success alert-dah'>Pendaftaran berhasil! Silahkan login.<span class='glyphicon glyphicon-remove pull-right btn-hide-alert'></span></div>";
 		}else if($alert == "slip-upload"){

@@ -139,7 +139,13 @@
 
 	<?php }else{?>
 	    <div class="container">
-            Maaf Produk yang kamu cari belum tersedia
+            
+
+
+            <div class="notfound ">
+            
+            <img src="<?php echo base_url()?>dah_image/system/produk_kos.png" alt="" srcset="">
+            </div>
         </div>
 	<?php }?>
 

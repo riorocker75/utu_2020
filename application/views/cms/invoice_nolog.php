@@ -3,8 +3,8 @@
     <div class="container">
         <div class="breadcrumbs-line">
             <ul>
-                <li><a href="<?php echo base_url()?>">Home</a> </li>
-                <li><a href="">Laman Pesanan</a> </li>
+                <li><a href="<?php echo base_url()?>">Laman Depan</a> </li>
+                <li><a href="">Pesanan</a> </li>
             </ul>
         </div>
     </div>
@@ -14,72 +14,109 @@
 <!-- end breadcrumb -->
 
 <section class="user-profile">
-<div class="row">
-      <div class="col-lg-8 offset-lg-2 col-sm-10 offset-sm-1 col-12">
-        <div class="nolog-invoice-bd">
-            <div class="nolog-inv-title">
-                Laman Pemesanan Produk tanpa login
-            </div>
 
-            <div class="nolog-inv-body">
+      <div class="container">
+          <div class="row">
+            
+			  
+              <div class="col-lg-12 col-md-12 col-12">
                 <?php show_alert()?>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>No.invoce</th>
-                            <th>Resi</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="row">
-                                <?php
-                                $id=$this->session->userdata('kode_id');
-                                $resi=$this->session->userdata('kode_resi');
-                                $status=$this->session->userdata('kode_status');
-                                ?>
-                               <a href="<?php echo base_url().'index/invoice_nolog_detail/'.$id ?>" data-toggle="tooltip" data-placement="bottom" title="Klik untuk melihat detail pesanan">
-                                   <?php echo $this->session->userdata('kode_order')?></a> 
-                                <?php
-                                    $phpdate = strtotime($this->session->userdata('kode_tgl'));
-                                    $mysqldate = date( 'd M Y', $phpdate );
-                                   ?>
-                               <p class="tx-12" style="margin-top:5px;color:#999;"> <?php echo $mysqldate; ?></p>
-                            </td>
-                            <td>
-                                <?php
-                                if($resi == ""){
-                                    echo "Resi belum di input";
-                                }else{
-                                    echo $resi;
-                                }
-                                ?>    
-                            </td>
-                            <td>
-                                <?php
-                                    if($status == 0){
-                                        echo "<span class='labil labil-warning'>Menunggu pembayaran</span>";
-                                    }else if($status == 1){
-                                        echo "<span class='labil labil-default'>Menunggu konfirmasi</span>";
-                                    }else if($status == 2){
-                                        echo "<span class='labil labil-danger'>Di tolak</span>";
-                                    }else if($status == 3){
-                                        echo "<span class='labil labil-primary'>Di proses</span>";
-                                    }else if($status == 4){
-                                        echo "<span class='labil labil-success'>Di bayar</span>";
-                                    }
-                                    ?>
-                            </td>
-                        </tr>
+                    <?php
+                    $id=$this->session->userdata('kode_id');
+                    $resi=$this->session->userdata('kode_resi');
+                    $status=$this->session->userdata('kode_status');
+                    ?>
                    
-                    </tbody>
-                </table>
-            </div>
+                    <?php
+                        $phpdate = strtotime($this->session->userdata('kode_tgl'));
+                        $mysqldate = date( 'd M Y', $phpdate );
+                        ?>
+			  	<div class="user-sb-main">
+                      <div class="order-title">
+                      <a href="<?php echo base_url().'index/invoice_nolog_detail/'.$id ?>" data-toggle="tooltip" data-placement="bottom" title="Klik untuk melihat detail pesanan">
+                                   <?php echo $this->session->userdata('kode_order')?></a> 
+						  <span class="float-right">
+                              <?php 
+                                 if($status == 4){
+									echo "Kode Resi :&nbsp;<span class='labil-o'> $resi</span>";
+                                }
+                              ?>
+						  <?php
+								if($status == 0){
+									echo "<span class='labil-o'>Menunggu pembayaran</span>";
+								}else if($status == 1){
+									echo "<span class='labil-o'>Menunggu konfirmasi</span>";
+								}else if($status == 2){
+									echo "<span class='labil-o'>Di tolak</span>";
+								}else if($status == 3){
+									echo "<span class='labil-o'>Di proses</span>";
+								}else if($status == 4){
+									echo "<span class='labil-o'>Di bayar</span>";
+								}
+                                ?>
+                              
+						  </span>
+						</div>
+						<!-- <?php if($status == 4){echo "active";}else{}?> -->
+						<?php if($status > 0){?>
+						<div class="body-progres">
+							<ul class="progress-order">
+								<li class="<?php if($status == 4){echo "active";}else{}?>"><span class="tx-12">Pembayaran Berhasil</span></li>
+								<li class="<?php if($status == 3){echo "active";}else{}?>"><span class="tx-12">Barang Dikirim</span> </li>
+								<li class="<?php if($status == 5){echo "active";}else{}?>"><span class="tx-12">Selesai</span> </li>
 
-        </div>
-      
-    </div>
-    </div>
+							</ul>
+						</div>
+						<?php }else{}?>
+			 		 	<div class="user-sb-main-body">
+							  <?php
+									 $barang=$this->db->query("select * from dah_products,orders where dah_products.prod_id=orders.order_produk and orders.order_invoice='$id'")->result(); 
+									 $subtotal = $this->db->query("select * from orders where orders.order_invoice='$id'")->result();
+									 $sub = "";
+									 foreach($subtotal as $s){
+										 $sub += $s->order_harga * $s->order_jumlah;
+									 }
+							  ?>
+							<?php foreach($barang as $b){?>
+								<div class="ket-cart-body">
+										<div class="ket-cb-img">
+												<?php 
+												if($b->prod_img1 != ""){
+													echo"<img src='".base_url().'dah_image/products/'.$b->prod_img1."' alt='product'>";
+												}else{
+													echo "<img src='".base_url()."dah_image/default/no_product.jpg' alt='product'>";
+												}
+											?>
+
+											<div class="ket-cb-nama">
+												<a href="<?php echo base_url().'produk/'.$b->prod_id.'-'.create_slug($b->prod_name) ?>" class="tx-14"><?php echo substr(strip_tags($b->prod_name),0,55) ?></a>
+												<p class="tx-14 tx-bold-600"><?php echo number_format($b->prod_price)?> 
+													<span class="tx-bold-400" style="color:rgb(119, 121, 140);">x <?php echo $b->order_jumlah ?></span>
+													<?php
+														$total_peritem=$b->prod_price * $b->order_jumlah; 
+													?>
+													<span class="float-right" style="color:rgb(119, 121, 140);">Rp.<?php echo number_format($total_peritem)?></span>
+												</p>
+												</div>
+										</div>	
+										
+												
+								</div>
+							<?php }?>		
+							<div class="order-footer">
+								<span class="float-right">Total:  <b class="tx-22 core-co">Rp.<?php echo number_format($sub)?></b></span>
+								<br>
+							</div>
+
+
+						</div>
+				
+					</div>
+					<!-- end user-sb-main -->
+              </div>
+						
+          </div>
+
+  </div>
 
 </section>

@@ -30,6 +30,11 @@
                       <div class="order-title">
 					 <a href="<?php echo base_url().'user/invoice_detail/'.$p->id ?>"><?php echo $p->no; ?></a>
 						  <span class="float-right">
+						  <?php 
+                                 if($p->$status == 4){
+									echo "Kode Resi :&nbsp;<span class='labil-o'> $p->resi</span>";
+                                }
+                              ?>
 						  <?php
 								if($p->status == 0){
 									echo "<span class='labil-o'>Menunggu pembayaran</span>";

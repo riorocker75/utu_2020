@@ -103,7 +103,10 @@
       <div class="col-lg-3">
           <div class="float-left">
               <div class="logo-rempah">
-                  <img src="<?php echo base_url().'dah_image/default/logorempah2.png'?>" alt="" srcset="">
+                  <a href="<?php echo base_url()?>">
+
+                    <img src="<?php echo base_url().'dah_image/default/logorempah2.png'?>" alt="" srcset="">
+                  </a>
               </div>
         </div>
       </div>

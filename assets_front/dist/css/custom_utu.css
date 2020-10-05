@@ -601,6 +601,12 @@ a.prod-price {
   }
 }
 
+@media (max-width: 992px) {
+  .breadcrumbs {
+    margin-top: 30px;
+  }
+}
+
 .breadcrumbs {
   height: auto;
   padding: 20px 0px 5px 0px;
